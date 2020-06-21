@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Valuae</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+     body, html {
+       height: 100%;
+       margin: 0;
+       font-family: Arial;
+       background-color: #f8f8f8;
+     }
+    
+    .telephone-top, .telephone-top:hover, .telephone-top:focus {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      top: 10px;
+    }    
+    
+    .telephone-top img {
+      width: 24px;
+    }
+    
+    .telephone-top span {
+      font-size: 16px;
+      height: 22px;
+      line-height: 22px;
+    }
+    
+    .steps .logo-and-phone {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: #0D0F23;
+    }
+
+     .steps .logo-and-phone .col-xs-6 {
+      height: 50px;
+      line-height: 50px;
+    }
+    
+    .regular-link, .regular-link:hover, .regular-link:focus {
+      text-decoration: none;
+    }
+    .brown-link {
+      color: #a98f5e;
+    }
+    .btn-brown {
+      background-color: #B5975E;
+      color: #fff;
+    }
+    .home-main-info {
+      color: #fff;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    
+    .home-main-info-steps p {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      font-family: Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+    }
+     .home-main-info-steps p img,.home-main-info-steps p span.diamant-info {
+         display: inline-block;
+     }
+     .home-main-info-steps p img {
+         position: relative;
+         bottom: 13px;
+         margin-right: 10px;
+     }
+    .btn-brown {
+      border-radius: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 40px;
+      line-height: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    .custom-bottom-links {
+      padding-top: 50px;
+      padding-bottom: 0px;
+      background-color: transparent;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .footer-bottom-text {
+      background-color: #0D0F23;
+      height: 60px;
+      line-height: 60px;
+      padding-top: 0px;
+      padding-bottom: 10px;
+    }
+    
+    .bottom-logo {
+      max-width: 90px;
+    }
+    
+    .flt-middle {
+      color: #fff;
+      text-align: center;
+    }
+    
+    .flt-certificate {      
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: auto;
+    }
+
+    /* progress bar */
+    .progress {
+      height: 10px;
+      border-radius: 0;
+      margin-bottom: 0px;
+    }
+
+    .progress-bar {
+        background-color: #B5975E;
+        height: 10px;
+        line-height: 10px;
+        -webkit-transition : width 5s ease;
+        -moz-transition : width 5s ease;
+        -o-transition : width 5s ease;
+        transition : width 5s ease;
+    }
+
+    /* top steps */
+    .top-steps-container {
+        height: auto;
+        line-height: 25px;
+        background-color: #fff;
+        color: #CBCBCB;
+        font-size: 14px;
+        padding-left: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+     .top-steps {
+         text-align: center;
+     }
+    .top-steps.active {
+        color: #00002C;
+    }
+
+    .s-btm {
+        font-weight: bold;
+    }
+
+    .steps h1 {
+        color: #00002C;
+        font-size: 50px;
+    }
+    .diamant-info {
+        color: #B5975E;
+        font-size: 16px;
+    }
+
+    /* diamonds shapes area*/
+    .choose-shape {
+        background-color: #fff;
+        padding: 35px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .choose-shape h3 {
+        color: #00002C;
+        font-size: 24px;
+
+    }
+
+    .diamond-shapes-container {
+        padding: 20px;
+        border: 1px solid #CBCBCB;
+        height: 95px;
+        margin-bottom: 20px;
+    }
+
+     .diamond-shapes-container:hover {
+         border: 1px solid #B5975E;
+     }
+
+     .choose-shape .col-md-3 {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+
+     .choose-shape .dsc {
+         padding-left: 10px;
+     }
+    @media (max-width: 480px) {
+      .main-logo {
+         max-width: 100px;
+         position: relative;
+         bottom: 5px;
+      }
+      
+      .home-main-info {
+         padding-left: 10px;
+         padding-right: 10px;
+         padding-top: 80px;
+      }
+
+      .custom-bottom-links {
+        padding-top: 20px;
+      }
+
+      .hidden-on-mobile {
+        display: none;
+      }
+      
+      .footer-bottom-text {
+        padding-top: 10px;
+        height: auto;
+        line-height: inherit;
+      }
+      
+      .flt-middle {
+        line-height: 20px;
+        max-width: 50%;
+      }
+      .custom-bottom-links { 
+        position: relative;
+      }
+    }
+    
+  </style>
+
+</head>
+<body>
+<div class="steps">
+
+    <!-- logo and phone -->
+    <div class="logo-and-phone">
+
+        <div class="container">
+            <div class="col-xs-4 col-md-6 text-left">
+                <a href="#">
+                    <img class="main-logo" src="/img/logo.png" alt=""/>
+                </a>
+            </div>
+            <div class="col-xs-8 col-md-6 text-right">
+                <a class="telephone-top" href="#">
+                    <img class="top-phone" src="/img/phone.png" alt=""/>
+                    <span>TEL : 0805 030 060</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- progress bar -->
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <!-- top steps -->
+    <div class="top-steps-container">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-md-3">
+                    <div class="top-steps active" id="top-steps-1">
+                        <div class="s-top">Étape 1 </div>
+                        <div class="s-btm">La forme</div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 ">
+                    <div class="top-steps" id="top-steps-2">
+                        <div class="s-top">Étape 2 </div>
+                        <div class="s-btm">Le poids</div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 ">
+                    <div class="top-steps" id="top-steps-3">
+                        <div class="s-top">Étape 3 </div>
+                        <div class="s-btm">Le certifica</div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-md-3 ">
+                    <div class="top-steps" id="top-steps-4">
+                        <div class="s-top">Étape 4 </div>
+                        <div class="s-btm">Vos coordonn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- main page info -->
+    <div class="container">
+        <div class="home-main-info-steps">
+          <h1>La forme de votre diamant</h1>
+          <p>
+              <img src="/img/circle_i.png" alt="">
+              <span class="diamant-info">
+                  Nous avons besoin de quelques informations à propos de <br> votre diamant pour l’évaluer dans les meilleures conditions.
+              </span>
+          </p>
+        </div>
+
+    </div>
+
+    <!-- under main info -->
+    <div class="container">
+
+        <div class="choose-shape">
+            <h3>
+                De quelle forme est votre diamant ?
+            </h3>
+
+            <div class="row">
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Rond.png" alt="">
+                        <span class="dsc">
+                            Rond
+                        </span>
+                    </div>
+                    
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Princess.png" alt="">
+                        <span class="dsc">
+                            Princesse
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Coussin.png" alt="">
+                        <span class="dsc">
+                            Coussin
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Emeraude.png" alt="">
+                        <span class="dsc">
+                            Emeraude
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Poire.png" alt="">
+                        <span class="dsc">
+                            Poire
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Marquise.png" alt="">
+                        <span class="dsc">
+                            Marquise
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Ovale.png" alt="">
+                        <span class="dsc">
+                            Ovale
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-6 col-md-3 ">
+
+                    <div class="diamond-shapes-container">
+                        <img src="/img/Coeur.png" alt="">
+                        <span class="dsc">
+                            Coeur
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="custom-bottom-links">
+      <div class="footer-bottom-text">
+        <div class="container">
+          <div class="col-xs-12 col-md-2 hidden-on-mobile">
+            <a href="#">
+              <img class="bottom-logo" src="/img/logo.png" alt=""/>
+            </a>
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <div class="flt-middle">
+              Mentions légales - Données personnelles - Gestion des cookies
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-2">
+
+          </div>
+        </div>
+      </div>
+      <img class="flt-certificate" src="/img/bottom_angle_certificate.png" alt=""/>
+    </div>
+  
+  
+</div>
+
+</body>
+</html>
