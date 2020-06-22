@@ -60,6 +60,13 @@
       padding-top: 50px;
       padding-bottom: 50px;
     }
+
+    .home-main-info-steps {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
     
     .home-main-info-steps p {
       padding-top: 10px;
@@ -92,7 +99,7 @@
       padding-top: 50px;
       padding-bottom: 0px;
       background-color: transparent;
-      position: absolute;
+      position: relative;
       left: 0;
       right: 0;
       bottom: 0;
@@ -133,10 +140,10 @@
         background-color: #B5975E;
         height: 10px;
         line-height: 10px;
-        -webkit-transition : width 5s ease;
-        -moz-transition : width 5s ease;
-        -o-transition : width 5s ease;
-        transition : width 5s ease;
+        -webkit-transition : width 2s ease;
+        -moz-transition : width 2s ease;
+        -o-transition : width 2s ease;
+        transition : width 2s ease;
     }
 
     /* top steps */
@@ -181,7 +188,7 @@
     .choose-shape h3 {
         color: #00002C;
         font-size: 24px;
-
+        margin-bottom: 30px;
     }
 
     .diamond-shapes-container {
@@ -203,6 +210,71 @@
      .choose-shape .dsc {
          padding-left: 10px;
      }
+
+     .mt-40 {
+         margin-top: 40px;
+     }
+
+     .return-buttons {
+         position: relative;
+         margin-bottom: 20px;
+     }
+
+     .btn.return {
+         display: none;
+         border: 1px solid #CBCBCB;
+         left: 7%;
+         top: 30px;
+         position: absolute;
+         background: none;
+         padding-top: 8px;
+         padding-bottom: 8px;
+         padding-left: 15px;
+         padding-right: 20px;
+     }
+/* step two buttons*/
+     .chs-buttons .btn {
+         width: 48%;
+         border: 1px solid #CBCBCB;
+         display: inline-block;
+         height: 40px;
+         line-height: 25px;
+         background-color: transparent;
+         outline: 0!important;
+         border-radius: 0;
+     }
+     .chs-buttons .btn:hover, .chs-buttons .btn:active, .chs-buttons .btn:focus {
+         border-color: #B5975E;
+         color: #B5975E;
+     }
+     .btn-oui {
+         margin-right: 2%;
+     }
+
+     .carats {
+         color: #00002C;
+     }
+     .amount-of-carats {
+         border: none;
+         border-bottom: 1px solid #979797;
+         color: #00002C;
+         width: 80px;
+         text-align: center;
+         padding-bottom: 5px;
+     }
+
+     .aoc-name {
+         padding-left: 30px;
+         padding-right: 30px;
+     }
+
+     .aoc-valider {
+         background: #FBFBFB;
+         border: 1px solid #DFDFDF;
+         color: #DFDFDF;
+         padding: 8px 40px;
+     }
+
     @media (max-width: 480px) {
       .main-logo {
          max-width: 100px;
@@ -304,125 +376,198 @@
 
     </div>
 
-    <!-- main page info -->
-    <div class="container">
-        <div class="home-main-info-steps">
-          <h1>La forme de votre diamant</h1>
-          <p>
-              <img src="/img/circle_i.png" alt="">
+
+    <div class="return-buttons">
+        <button class="btn return" id="return-one"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-two"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-three"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+    </div>
+
+
+    <form action="/">
+
+        <!-- STEP ONE -->
+
+        <div class="step" id="step-one">
+            <!-- main page info -->
+            <div class="container">
+                <div class="home-main-info-steps">
+                    <h1>La forme de votre diamant</h1>
+                    <p>
+                        <img src="/img/circle_i.png" alt="">
               <span class="diamant-info">
                   Nous avons besoin de quelques informations à propos de <br> votre diamant pour l’évaluer dans les meilleures conditions.
               </span>
-          </p>
-        </div>
+                    </p>
+                </div>
 
-    </div>
+            </div>
 
-    <!-- under main info -->
-    <div class="container">
+            <!-- under main info -->
+            <div class="container">
 
-        <div class="choose-shape">
-            <h3>
-                De quelle forme est votre diamant ?
-            </h3>
+                <div class="choose-shape">
+                    <h3>
+                        De quelle forme est votre diamant ?
+                    </h3>
 
-            <div class="row">
+                    <div class="row">
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Rond.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Rond.png" alt="">
                         <span class="dsc">
                             Rond
                         </span>
-                    </div>
-                    
-                </div>
+                            </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        </div>
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Princess.png" alt="">
+                        <div class="col-xs-6 col-md-3 ">
+
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Princess.png" alt="">
                         <span class="dsc">
                             Princesse
                         </span>
-                    </div>
+                            </div>
 
-                </div>
+                        </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Coussin.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Coussin.png" alt="">
                         <span class="dsc">
                             Coussin
                         </span>
-                    </div>
+                            </div>
 
-                </div>
+                        </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Emeraude.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Emeraude.png" alt="">
                         <span class="dsc">
                             Emeraude
                         </span>
-                    </div>
+                            </div>
 
-                </div>
+                        </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Poire.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Poire.png" alt="">
                         <span class="dsc">
                             Poire
                         </span>
-                    </div>
+                            </div>
 
-                </div>
+                        </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Marquise.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Marquise.png" alt="">
                         <span class="dsc">
                             Marquise
                         </span>
-                    </div>
+                            </div>
 
-                </div>
+                        </div>
 
-                <div class="col-xs-6 col-md-3 ">
+                        <div class="col-xs-6 col-md-3 ">
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Ovale.png" alt="">
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Ovale.png" alt="">
                         <span class="dsc">
                             Ovale
                         </span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-6 col-md-3 ">
+
+                            <div class="diamond-shapes-container">
+                                <img src="/img/Coeur.png" alt="">
+                        <span class="dsc">
+                            Coeur
+                        </span>
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div class="col-xs-6 col-md-3 ">
+            </div>
+        </div>
 
-                    <div class="diamond-shapes-container">
-                        <img src="/img/Coeur.png" alt="">
-                        <span class="dsc">
-                            Coeur
-                        </span>
+
+        <!-- STEP TWO -->
+        <div class="step" id="step-two">
+
+            <!-- main page info -->
+            <div class="container">
+
+                <div class="home-main-info-steps">
+
+                    <h1>Le poids de votre diamant</h1>
+
+                </div>
+
+                <div class="choose-shape">
+
+                    <h3>
+                        Connaissez-vous le poids de votre diamant ?
+                    </h3>
+
+                    <div class="chs-buttons">
+                        <button class="btn btn-oui">Oui</button>
+                        <button class="btn btn-non">Non</button>
                     </div>
 
+                </div>
+
+                <div class="choose-shape mt-40">
+                    <h3>
+                        Merci de renseigner le poids de votre diamant en carat :
+                    </h3>
+
+                    <div class="carats">
+
+                        <input type="number" class="amount-of-carats" value="15" name="amount-of-carats">
+
+                        <span class="aoc-name">carats</span>
+
+                        <button class="aoc-valider">VALIDER</button>
+
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
 
-    <div class="custom-bottom-links">
+        <!-- STEP THREE -->
+
+
+
+    </form>
+
+
+
+
+
+    <!--FOOTER-->
+
+    <div class="footer custom-bottom-links">
       <div class="footer-bottom-text">
         <div class="container">
           <div class="col-xs-12 col-md-2 hidden-on-mobile">
@@ -442,9 +587,30 @@
       </div>
       <img class="flt-certificate" src="/img/bottom_angle_certificate.png" alt=""/>
     </div>
-  
-  
 </div>
+
+<script>
+$(document).ready(function() {
+
+    $('.diamond-shapes-container').click(function() {
+
+        // next to step 2
+        $('#top-steps-2').addClass('active');
+
+        // change progress bar
+        $('.progress-bar').css({'width': '40%'});
+
+        // show button return to step one
+        $('.btn.return').hide();
+        $('#return-one').show();
+
+        // change content
+
+
+    });
+
+});
+</script>
 
 </body>
 </html>
