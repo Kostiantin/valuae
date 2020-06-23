@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
   <style>
@@ -140,10 +141,10 @@
         background-color: #B5975E;
         height: 10px;
         line-height: 10px;
-        -webkit-transition : width 2s ease;
-        -moz-transition : width 2s ease;
-        -o-transition : width 2s ease;
-        transition : width 2s ease;
+        -webkit-transition : width 1s ease;
+        -moz-transition : width 1s ease;
+        -o-transition : width 1s ease;
+        transition : width 1s ease;
     }
 
     /* top steps */
@@ -275,6 +276,9 @@
          padding: 8px 40px;
      }
 
+     #step-2, #step-3, #step-4 {
+         display: none;
+     }
     @media (max-width: 480px) {
       .main-logo {
          max-width: 100px;
@@ -378,9 +382,9 @@
 
 
     <div class="return-buttons">
-        <button class="btn return" id="return-one"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
-        <button class="btn return" id="return-two"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
-        <button class="btn return" id="return-three"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-1"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-2"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-3"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
     </div>
 
 
@@ -388,7 +392,7 @@
 
         <!-- STEP ONE -->
 
-        <div class="step" id="step-one">
+        <div class="step" id="step-1">
             <!-- main page info -->
             <div class="container">
                 <div class="home-main-info-steps">
@@ -510,7 +514,7 @@
 
 
         <!-- STEP TWO -->
-        <div class="step" id="step-two">
+        <div class="step" id="step-2">
 
             <!-- main page info -->
             <div class="container">
@@ -602,12 +606,39 @@ $(document).ready(function() {
 
         // show button return to step one
         $('.btn.return').hide();
-        $('#return-one').show();
+        $('#return-1').fadeIn('slow');
 
         // change content
-
+        $('#step-1').hide();
+        $('#step-2').show("slide", { direction: "right" }, 1000);
 
     });
+
+    $('.btn.return').click(function() {
+
+        var _prev_step_num = parseInt($(this).attr('id').replace('return-', ''));
+        var _current_step_num = _prev_step_num +1;
+        var _prev_prev_step_num = _prev_step_num - 1;
+
+        $('#step-'+_current_step_num).hide("slide", { direction: "right" }, 1000);
+        $('#step-'+_prev_step_num).show("slide", { direction: "left" }, 1000);
+
+        $('.btn.return').fadeOut('slow');
+
+        // show correct prev step button
+        if ($('#return-' + _prev_prev_step_num).length > 0) {
+            $('#return-' + _prev_prev_step_num).fadeIn('slow');
+        }
+
+        // change progress bar
+        $('.progress-bar').css({'width': (20 * _prev_step_num)+'%'});
+
+
+        // remove active class from top step
+        $('#top-steps-'+_current_step_num).removeClass('active');
+
+    });
+
 
 });
 </script>
