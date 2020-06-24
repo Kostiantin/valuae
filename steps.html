@@ -177,6 +177,8 @@
     .diamant-info {
         color: #B5975E;
         font-size: 16px;
+        padding-left: 30px;
+        padding-top: 30px;
     }
 
     /* diamonds shapes area*/
@@ -320,7 +322,85 @@
          margin: 0 auto;
          display: block;
      }
+     .s-boxes .row {
+         margin-bottom: 20px;
+     }
+     .s-boxes input, .s-boxes select {
+         height: 45px;
+         line-height: 45px;
+         border: 1px solid #CBCBCB;
+         text-align: center;
+         width: 100%;
+         display: inline-block;
+         padding: 0 15px;
+         border-radius: 0;
+     }
+     .s-boxes input:hover, .s-boxes select:hover, .s-boxes input:focus, .s-boxes select:focus, .s-boxes input:active, .s-boxes select:active  {
+         outline: 0!important;
+     }
+     .s-boxes label {
+         width: 100%;
+     }
+     .s-boxes .to-next-step {
+         height: 45px;
+         line-height: 45px;
+         color: #B5975E;
+         border: 1px solid #B5975E;
+         width: 100%;
 
+     }
+     .s-boxes input#gia_report_number {
+         border-top: none;
+         border-left: none;
+         border-right: none;
+         background: none;
+         box-shadow: none;
+     }
+     .general-input-no-borders {
+         height: 45px;
+         line-height: 45px;
+         border: 1px solid #CBCBCB;
+         text-align: center;
+         width: 100%;
+         display: inline-block;
+         padding: 0 15px;
+         border-radius: 0;
+         border-top: none;
+         border-left: none;
+         border-right: none;
+         background: none;
+         box-shadow: none;
+         color: #00002C;
+     }
+     .general-input-no-borders:focus, .general-input-no-borders:hover, .general-input-no-borders:active {
+         outline: 0!important;
+         box-shadow: none;
+     }
+     #step-4 label {
+         position: relative;
+         top: 20px;
+         left: 30px;
+         font-family: Arial;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 16px;
+         color: #00002C;
+     }
+     .main-submit-button {
+         border: 1px solid #B5975E;
+         height: 45px;
+         line-height: 45px;
+         padding: 0 15px;
+         width: 100%;
+         background-color: #fff;
+         text-transform: uppercase;
+         color: #B5975E;
+         margin-top: 30px;
+     }
+     #step-4 .choose-shape {
+         padding-left: 50px;
+         padding-right: 50px;
+     }
     @media (max-width: 480px) {
       .main-logo {
          max-width: 100px;
@@ -828,42 +908,7 @@
                                  </div>
                             </div>
                         </div>
-                        <style>
-                            .s-boxes .row {
-                                margin-bottom: 20px;
-                            }
-                            .s-boxes input, .s-boxes select {
-                                height: 45px;
-                                line-height: 45px;
-                                border: 1px solid #CBCBCB;
-                                text-align: center;
-                                width: 100%;
-                                display: inline-block;
-                                padding: 0 15px;
-                                border-radius: 0;
-                            }
-                            .s-boxes input:hover, .s-boxes select:hover, .s-boxes input:focus, .s-boxes select:focus, .s-boxes input:active, .s-boxes select:active  {
-                                outline: 0!important;
-                            }
-                            .s-boxes label {
-                                width: 100%;
-                            }
-                            .s-boxes .to-next-step {
-                                height: 45px;
-                                line-height: 45px;
-                                color: #B5975E;
-                                border: 1px solid #B5975E;
-                                width: 100%;
 
-                            }
-                            .s-boxes input#gia_report_number {
-                                border-top: none;
-                                border-left: none;
-                                border-right: none;
-                                background: none;
-                                box-shadow: none;
-                            }
-                        </style>
                     </div>
                 </div>
 
@@ -872,6 +917,101 @@
 
         <!-- STEP FOUR -->
 
+        <div class="step" id="step-4">
+            <!-- main page info -->
+            <div class="container">
+                <div class="home-main-info-steps">
+                    <h1>Vos cordonnées</h1>
+                    <p>
+                        <img src="/img/circle_i.png" alt="">
+              <span class="diamant-info">
+                  Nous aurons besoin de vos informations personnelles <br>
+pour prendre contact avec vous lors du rachat de votre diamant. <br>
+Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci.
+              </span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- under main info -->
+            <div class="container">
+
+                <div class="choose-shape">
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-md-6 ">
+
+                            <div class="form-group">
+                                <label class="" for="prenom">Prénom</label>
+                                <input type="text" class="form-control general-input-no-borders" id="prenom" name="prenom">
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-md-6 ">
+
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control general-input-no-borders" id="nom" name="nom">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-12 col-md-6 ">
+
+                            <div class="form-group">
+                                <label class="" for="e-mail">E-mail</label>
+                                <input type="email" class="form-control general-input-no-borders" id="e-mail" name="e-mail">
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-md-6 ">
+
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="text" class="form-control general-input-no-borders" id="telephone" name="telephone">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-12 col-md-6 ">
+
+                            <div class="form-group">
+                                <label class="" for="ville">Ville</label>
+                                <input type="text" class="form-control general-input-no-borders" id="ville" name="ville">
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-md-6 ">
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-12 col-md-6 ">
+
+                        </div>
+                        <div class="col-xs-12 col-md-6 ">
+                            <button class="main-submit-button" type="button">Obtenir l’estimation de mon diamant</button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
 
 
     </form>
