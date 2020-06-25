@@ -1046,6 +1046,68 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
     </div>
 </div>
 
+<div class="submit-loading">
+
+    <div class="in-submit-loading">
+        <div class="insl-image-container">
+            <img src="/img/submit_stone.png" alt=""/>
+        </div>
+
+        <span class="header-centered">Évaluation de votre diamant en cours…</span>
+        <p>
+            ….afin de vous garantir la meilleure offre de rachat,<br> nous interrogeons pour vous les différentes places de
+            <br> marché mondiales: New York, Anvers, Ramat-Gan, <br> Mombay…..
+        </p>
+    </div>
+
+</div>
+<style>
+
+    .submit-loading {
+        background-color: #b5975e;
+        display: table;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        color: #fff;
+        font-family: Open Sans;
+        height: 100%;
+        display: none;
+    }
+    .in-submit-loading {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+    }
+    .submit-loading .header-centered {
+        font-size: 30px;
+    }
+    .submit-loading p {
+        font-size: 16px;
+    }
+    .insl-image-container {
+        position: relative;
+    }
+    .submit-loading img {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        margin:-60px 0 0 -60px;
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+</style>
 <script>
 $(document).ready(function() {
 
@@ -1094,6 +1156,19 @@ $(document).ready(function() {
 
         // remove active class from top step
         $('#top-steps-'+_current_step_num).removeClass('active');
+
+    });
+
+
+    $('.main-submit-button').click(function() {
+
+        $('.progress-bar').css({'width': (20 * 5)+'%'});
+
+        $('.submit-loading').css({'display': 'table'});
+
+        setTimeout(function() {
+          $('.submit-loading').hide();
+        }, 5000);
 
     });
 
