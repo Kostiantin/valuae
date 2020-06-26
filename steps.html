@@ -9,12 +9,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
      body, html {
        height: 100%;
        margin: 0;
-       font-family: Arial;
+       font-family: "Open Sans";
        background-color: #f8f8f8;
      }
     
@@ -173,6 +173,7 @@
     .steps h1 {
         color: #00002C;
         font-size: 50px;
+        font-family: "Open Sans";
     }
     .diamant-info {
         color: #B5975E;
@@ -405,42 +406,189 @@
          position: relative;
          bottom: 30px;
      }
-    @media (max-width: 480px) {
-      .main-logo {
-         max-width: 100px;
+
+     .submit-loading {
+         background-color: #b5975e;
+         position: fixed;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         width: 100%;
+         color: #fff;
+         font-family: "Open Sans";
+         height: 100%;
+         display: none;
+     }
+     .in-submit-loading {
+         display: table-cell;
+         vertical-align: middle;
+         text-align: center;
+         width: 100%;
+     }
+     .submit-loading .header-centered {
+         font-size: 30px;
+     }
+     .submit-loading p {
+         font-size: 16px;
+     }
+     .insl-image-container {
          position: relative;
-         bottom: 5px;
-      }
-      
-      .home-main-info {
-         padding-left: 10px;
-         padding-right: 10px;
-         padding-top: 80px;
-      }
+     }
+     .submit-loading img {
+         position: absolute;
+         top: -60px;
+         left: 50%;
+         width: 120px;
+         height: 120px;
+         margin:-60px 0 0 -60px;
+         -webkit-animation:spin 4s linear infinite;
+         -moz-animation:spin 4s linear infinite;
+         animation:spin 4s linear infinite;
+     }
+     @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+     @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+     @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-      .custom-bottom-links {
-        padding-top: 20px;
-      }
+    @media (max-width: 480px) {
+        .home-main-info-steps {
+            padding-top: 0px;
+            padding-left: 5px;
+            max-width: 100%;
+            padding-bottom: 0;
+        }
+        .logo-and-phone .col-xs-4 {
+            padding-left: 10px;
+        }
+        .telephone-top {
+            top: 0;
+        }
+        .telephone-top span {
+            font-size: 14px;
+        }
+        .main-logo {
+            max-width: 100px;
+            position: relative;
+            bottom: 5px;
+        }
+        .steps .logo-and-phone {
+            padding-top: 35px;
+            padding-bottom: 25px;
+        }
+        .top-steps-container {
+            font-size: 11px;
+            padding-left: 0;
+        }
+        .top-steps-container .col-xs-3 {
+            padding: 0 10px;
+        }
+        .steps h1 {
+            font-size: 35px;
+            line-height: 48px;
+        }
+        .home-main-info-steps p {
+            position:relative;
+        }
+        .home-main-info-steps p img {
+            position: absolute;
+            top: 35%;
+        }
+        .diamant-info {
+            padding-left: 50px;
+            padding-top: 10px;
+        }
+        .choose-shape {
+            max-width: 100%;
+            padding: 25px;
+        }
+        .choose-shape h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .diamond-shapes-container {
+            padding: 15px;
+            height: 66px;
+        }
+        .diamond-shapes-container img {
+            max-width: 37px;
+            max-height: 37px;
+        }
+        .choose-shape .dsc {
+            font-size: 12px;
+        }
 
-      .hidden-on-mobile {
-        display: none;
-      }
-      
-      .footer-bottom-text {
-        padding-top: 10px;
-        height: auto;
-        line-height: inherit;
-      }
-      
-      .flt-middle {
-        line-height: 20px;
-        max-width: 50%;
-      }
-      .custom-bottom-links { 
-        position: relative;
-      }
+        .hidden-on-mobile {
+            display: none;
+        }
+        .flt-middle {
+            line-height: 30px;
+        }
+        .footer-bottom-text {
+            height: auto;
+            padding-top: 15px;
+        }
+        .return-buttons {
+            height: 45px;
+        }
+        #step-2 .home-main-info-steps, #step-3 .home-main-info-steps {
+            margin-bottom: 25px;
+        }
+        .aoc-valider {
+            padding: 8px 20px;
+        }
+        .chs-buttons.s3 {
+            padding: 0;
+        }
+        .chs-buttons.s3 .col-md-4 {
+            margin-bottom: 15px;
+        }
+        .brand-container {
+            height: 80px;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .brand-container img {
+            max-width: 100px;
+            max-height: 43px;
+        }
+        .chs-buttons.s3 .btn {
+            height: 100px;
+        }
+        .s-boxes .col-md-6 .col-md-6 {
+            padding: 0;
+        }
+        label[for="cut_grade"], label[for="color_grade"], label[for="symmetry"] {
+          margin-top: 20px;
+        }
+        #step-4 .home-main-info-steps p img {
+            position: absolute;
+        }
+        #step-4 .choose-shape {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .main-submit-button {
+            font-size: 13px;
+        }
+
+        .submit-loading img {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin: -40px 0 0 -40px;
+        }
+        .in-submit-loading {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .submit-loading .header-centered {
+            padding-bottom: 15px;
+            display: block;
+        }
     }
-    
+
   </style>
 
 </head>
@@ -452,7 +600,7 @@
 
         <div class="container">
             <div class="col-xs-4 col-md-6 text-left">
-                <a href="#">
+                <a href="/">
                     <img class="main-logo" src="/img/logo.png" alt=""/>
                 </a>
             </div>
@@ -1032,12 +1180,12 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
               <img class="bottom-logo" src="/img/logo.png" alt=""/>
             </a>
           </div>
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-8 col-md-8">
             <div class="flt-middle">
               Mentions légales - Données personnelles - Gestion des cookies
             </div>
           </div>
-          <div class="col-xs-12 col-md-2">
+          <div class="col-xs-4 col-md-2">
 
           </div>
         </div>
@@ -1045,6 +1193,9 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
       <img class="flt-certificate" src="/img/bottom_angle_certificate.png" alt=""/>
     </div>
 </div>
+
+
+<!-- SUBMIT BANNER -->
 
 <div class="submit-loading">
 
@@ -1061,53 +1212,6 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
     </div>
 
 </div>
-<style>
-
-    .submit-loading {
-        background-color: #b5975e;
-        display: table;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        color: #fff;
-        font-family: Open Sans;
-        height: 100%;
-        display: none;
-    }
-    .in-submit-loading {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        width: 100%;
-    }
-    .submit-loading .header-centered {
-        font-size: 30px;
-    }
-    .submit-loading p {
-        font-size: 16px;
-    }
-    .insl-image-container {
-        position: relative;
-    }
-    .submit-loading img {
-        position: absolute;
-        top: -60px;
-        left: 50%;
-        width: 120px;
-        height: 120px;
-        margin:-60px 0 0 -60px;
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;
-    }
-    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-</style>
 <script>
 $(document).ready(function() {
 
@@ -1164,10 +1268,12 @@ $(document).ready(function() {
 
         $('.progress-bar').css({'width': (20 * 5)+'%'});
 
-        $('.submit-loading').css({'display': 'table'});
+        setTimeout(function() {$('.submit-loading').css({'display': 'table'});}, 1000);
+
 
         setTimeout(function() {
-          $('.submit-loading').hide();
+            //$('.submit-loading').hide();
+            //$('.progress-bar').css({'width': (20 * 4)+'%'});
         }, 5000);
 
     });
