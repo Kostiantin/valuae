@@ -57,6 +57,9 @@ console.log(shapeOfDiamond);
     // step back click
     $('.btn.return').click(function() {
 
+        // hide sub points
+        $('#sub-point-2-1, #sub-point-2-2, #sub-point-2-3, #sub-point-2-4, #sub-point-3-1, #sub-point-3-2, #sub-point-3-3, #sub-point-3-4').hide();
+
         var _prev_step_num = parseInt($(this).attr('id').replace('return-', ''));
         var _current_step_num = _prev_step_num + 1;
         var _prev_prev_step_num = _prev_step_num - 1;
@@ -106,10 +109,49 @@ console.log(shapeOfDiamond);
 
     // Oui / Non function
     $('.subpoint-trigger').click(function() {
+
         $('.sub-point').hide();
+
+        $('.subpoint-trigger').removeClass('active');
+
+        $(this).addClass('active');
+
         var sub_point_to_show = $(this).data('subpointtoshow');
-        $('#sub-point-'+sub_point_to_show).show();
+
+        if (sub_point_to_show == '2-2') {
+            console.log(shapeOfDiamond);
+            if (shapeOfDiamond == 'square') {
+                $('#sub-point-2-3').show();
+            }
+            else {
+                $('#sub-point-'+sub_point_to_show).show();
+            }
+
+        }
+        else {
+            $('#sub-point-'+sub_point_to_show).show();
+        }
+
     });
 
+
+    // validation on step 2
+    $('.with-validation-inputs input').keyup(function() {
+
+        var _errors_in_block = false;
+
+        $(this).parents('.with-validation-inputs:first').find('input').each(function() {
+            if ($(this).val() == '') {
+                _errors_in_block = true;
+            }
+        });
+
+        if (_errors_in_block == false) {
+            $(this).parents('.with-validation-inputs:first').find('button.aoc-valider').removeAttr('disabled');
+        }
+        else {
+            $(this).parents('.with-validation-inputs:first').find('button.aoc-valider').attr('disabled', true);
+        }
+    });
 
 });

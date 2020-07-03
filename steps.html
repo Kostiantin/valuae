@@ -222,45 +222,138 @@
                     </h3>
 
                     <div class="chs-buttons">
-                        <button class="btn btn-oui connaissez-oui subpoint-trigger" type="button" data-subpointtoshow="1">Oui</button>
-                        <button class="btn btn-non connaissez-non subpoint-trigger" type="button" data-subpointtoshow="2">Non</button>
+                        <button class="btn btn-oui connaissez-oui subpoint-trigger" type="button" data-subpointtoshow="2-1">Oui</button>
+                        <button class="btn btn-non connaissez-non subpoint-trigger" type="button" data-subpointtoshow="2-2">Non</button>
                     </div>
 
                 </div>
 
-                <div class="choose-shape mt-40 sub-point" id="sub-point-1">
+                <div class="choose-shape mt-20 sub-point sub-point-2" id="sub-point-2-1">
                     <h3>
                         Merci de renseigner le poids de votre diamant en carat :
                     </h3>
 
-                    <div class="carats">
+                    <div class="carats with-validation-inputs">
 
-                        <input type="text" class="spec-no-border-inp" value="15" name="amount-of-carats">
+                        <input type="number" class="spec-no-border-inp" value="" name="amount-of-carats">
 
                         <span class="aoc-name">carats</span>
 
-                        <button class="aoc-valider to-next-step" data-ns="3" type="button">VALIDER</button>
+                        <button class="aoc-valider to-next-step" data-ns="3" type="button" disabled >VALIDER</button>
 
                     </div>
                 </div>
 
-                <div class="choose-shape mt-40 sub-point" id="sub-point-2">
+
+                <!-- For round diamonds -->
+                <div class="choose-shape mt-20 sub-point sub-point-2" id="sub-point-2-2">
+
                     <h3>
                         Merci de renseigner les dimensions de votre diamant :
                     </h3>
 
-                    <div class="carats">
+                    <div class="carats with-validation-inputs">
 
-                        <input type="number" class="spec-no-border-inp" value="15" name="diameter">
+                        <ul class="sbp-inputs sbp-inputs-dimensions-round">
+                            <li class="one">
 
-                        <span class="aoc-name">mm</span>
+                                <div class="sbp-label">diamètre</div>
+                                <input type="number" class="spec-no-border-inp" value="" name="diameter" id="diameter_round">
 
-                        <input type="number" class="spec-no-border-inp" value="15" name="diameter">
+                            </li>
+                            <li class="two">
 
-                        <button class="aoc-valider to-next-step" data-ns="3" type="button">VALIDER</button>
+                                <span class="mm">mm &nbsp;&nbsp;&nbsp; x</span>
+
+                            </li>
+                            <li class="three">
+
+                                <div class="sbp-label">hauteur</div>
+                                <input type="number" class="spec-no-border-inp" value="" name="height" id="height_round">
+
+                            </li>
+                            <li class="three-half">
+
+                                <span class="mm-l">mm</span>
+
+                            </li>
+                            <li class="four">
+
+                                <button class="aoc-valider to-next-step" data-ns="3" type="button" disabled >VALIDER</button>
+
+                            </li>
+
+                        </ul>
+                        <div class="clearfixer"></div>
+                        <div class="poids-estime">
+                            Poids estimé : <span class="pe-result">15</span> &nbsp;&nbsp;ct
+                        </div>
 
                     </div>
+
                 </div>
+
+                <!-- For square diamonds -->
+                <div class="choose-shape mt-20 sub-point sub-point-2" id="sub-point-2-3">
+
+                    <h3>
+                        Merci de renseigner les dimensions de votre diamant :
+                    </h3>
+
+                    <div class="carats with-validation-inputs">
+
+                        <ul class="sbp-inputs sbp-inputs-dimensions-round">
+                            <li class="one">
+
+                                <div class="sbp-label">diamètre</div>
+                                <input type="number" class="spec-no-border-inp" value="" name="diameter" id="diameter_square">
+
+                            </li>
+
+                            <li class="two">
+
+                                <span class="mm">mm &nbsp;&nbsp;&nbsp; x</span>
+
+                            </li>
+                            <li class="three">
+
+                                <div class="sbp-label">largeur</div>
+                                <input type="number" class="spec-no-border-inp" value="" name="height" id="width_square">
+
+                            </li>
+
+                            <li class="two">
+
+                                <span class="mm">mm &nbsp;&nbsp;&nbsp; x</span>
+
+                            </li>
+                            <li class="three one-more">
+
+                                <div class="sbp-label">hauteur</div>
+                                <input type="number" class="spec-no-border-inp" value="" name="height" id="height_square">
+
+                            </li>
+                            <li class="three-half one-more">
+
+                                <span class="mm-l">mm</span>
+
+                            </li>
+                            <li class="four">
+
+                                <button class="aoc-valider to-next-step" data-ns="3" type="button" disabled >VALIDER</button>
+
+                            </li>
+
+                        </ul>
+                        <div class="clearfixer"></div>
+                        <div class="poids-estime">
+                            Poids estimé : <span class="pe-result">15</span> &nbsp;&nbsp;ct
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
@@ -282,14 +375,14 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3-1">
                                     J’ai un certificat gemmologique
                                 </button>
 
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="4">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3-2">
                                     Je possède une attestation d’un bijoutier ou d’un expert
                                     (en vue d’assurance ou autre…)
                                 </button>
@@ -297,7 +390,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="5">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3-3">
                                     Je n’ai aucun détail sur mon diamant
                                 </button>
 
@@ -307,7 +400,7 @@
                     </div>
                 </div>
 
-                <div class="choose-shape mt-40 sub-point" id="sub-point-3">
+                <div class="choose-shape mt-20 sub-point sub-point-3" id="sub-point-3-1">
                     <h3>
                         Quel est votre certificat ?
                     </h3>
@@ -320,7 +413,6 @@
                                         <img src="gia.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <div class="bc-table">
@@ -328,7 +420,6 @@
                                         <img src="hrd.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -336,7 +427,6 @@
                                         <img src="igi.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -344,7 +434,6 @@
                                         <img src="lfg.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -352,7 +441,6 @@
                                         <img src="gil.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -360,7 +448,6 @@
                                         <img src="aig.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -368,8 +455,6 @@
                                         <img src="igl.png" alt="">
                                     </div>
                                 </div>
-
-
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
@@ -377,16 +462,13 @@
                                         J’ai un autre certificat gemmologique
                                     </div>
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>
 
 
-                <div class="choose-shape mt-40 sub-point" id="sub-point-4">
+                <div class="choose-shape mt-20 sub-point sub-point-3" id="sub-point-3-2">
                     <h3>
                         Mon certificat GIA
                     </h3>
@@ -534,20 +616,20 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
                         <div class="col-xs-12 col-md-6 ">
 
                             <div class="form-group">
-                                <label class="" for="prenom">Prénom</label>
-                                <input type="text" class="form-control general-input-no-borders" id="prenom" name="prenom">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control general-input-no-borders" id="nom" name="nom" required>
                             </div>
 
                         </div>
+
                         <div class="col-xs-12 col-md-6 ">
 
                             <div class="form-group">
-                                <label for="nom">Nom</label>
-                                <input type="text" class="form-control general-input-no-borders" id="nom" name="nom">
+                                <label class="" for="ville">Ville</label>
+                                <input type="text" class="form-control general-input-no-borders" id="ville" name="ville">
                             </div>
 
                         </div>
-
 
                     </div>
                     <div class="row">
@@ -556,7 +638,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
 
                             <div class="form-group">
                                 <label class="" for="e-mail">E-mail</label>
-                                <input type="email" class="form-control general-input-no-borders" id="e-mail" name="e-mail">
+                                <input type="email" class="form-control general-input-no-borders" id="e-mail" name="e-mail" required>
                             </div>
 
                         </div>
@@ -571,22 +653,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
 
 
                     </div>
-                    <div class="row">
 
-                        <div class="col-xs-12 col-md-6 ">
-
-                            <div class="form-group">
-                                <label class="" for="ville">Ville</label>
-                                <input type="text" class="form-control general-input-no-borders" id="ville" name="ville">
-                            </div>
-
-                        </div>
-                        <div class="col-xs-12 col-md-6 ">
-
-                        </div>
-
-
-                    </div>
                     <div class="row">
 
                         <div class="col-xs-12 col-md-6 ">

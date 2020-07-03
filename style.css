@@ -14,6 +14,46 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url("OpenSans-LightItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-image: url(arrow_down.png);
+    background-position: 94% center;
+    padding-right: 45px!important;
+    background-repeat: no-repeat;
+    min-width: 197px;
+    height: 51px!important;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+button {
+    box-shadow: none!important;
+}
 body, html {
     height: 100%;
     margin: 0;
@@ -434,18 +474,26 @@ input:focus, textarea:focus, select:focus, button:focus {
     width: 80px;
     text-align: center;
     padding-bottom: 5px;
+    font-size: 16px;
 }
 
 .aoc-name {
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 50px;
+    font-size: 16px;
 }
-
 .aoc-valider {
+    background-color: #fff;
+    border: 1px solid #B5975E;
+    color: #B5975E;
+    padding: 8px 40px;
+    width: 227px;
+    height: 51px;
+}
+.aoc-valider:disabled {
     background: #FBFBFB;
     border: 1px solid #DFDFDF;
     color: #DFDFDF;
-    padding: 8px 40px;
 }
 
 #step-2, #step-3, #step-4 {
@@ -644,7 +692,98 @@ input:focus, textarea:focus, select:focus, button:focus {
 .sub-point {
     display: none;
 }
+
+.clearfixer {
+    float: none;
+    clear: both;
+}
+
+ul.sbp-inputs {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+ul.sbp-inputs li {
+    float: left;
+    list-style-type: none;
+    padding-right: 10px;
+    color: #00002C;
+}
+.sbp-inputs.sbp-inputs-dimensions-round li.two, .sbp-inputs.sbp-inputs-dimensions-round li.three-half {
+    height: 47px;
+    line-height: 80px;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+.sbp-inputs.sbp-inputs-dimensions-round li.four {
+    padding-left: 140px;
+}
+.sbp-label {
+    text-align: center;
+    position: relative;
+    top: -5px;
+    font-size: 16px;
+    font-family: 'Open Sans Italic';
+    margin-bottom: 10px;
+}
+.mm-l,.mm {
+    font-size: 16px;
+}
+.poids-estime {
+    font-size: 16px;
+    font-family: 'Open Sans Regular';
+    margin-top: 25px;
+}
+.pe-result {
+    padding-left: 30px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+#sub-point-2-2.choose-shape h3, #sub-point-2-3.choose-shape h3 {
+    margin-bottom: 40px;
+}
+
+.subpoint-trigger.active {
+    border: 1px solid #B5975E;
+    color: #B5975E;
+}
+
+#sub-point-3-2 button.to-next-step {
+    height: 51px;
+    min-width: 197px;
+}
+#sub-point-3-2 input {
+    height: 51px;
+    min-width: 197px;
+}
+
 @media (max-width: 480px) {
+    .sbp-inputs.sbp-inputs-dimensions-round li.three-half.one-more .mm-l {
+        padding-left: 10px;
+        position: relative;
+        top: 35px;
+    }
+    .sbp-label {
+        margin-bottom: 0;
+    }
+    ul.sbp-inputs li.three.one-more {
+        width: 60px;
+        padding-top: 40px;
+        clear: both;
+    }
+    ul.sbp-inputs li.three.one-more input {
+        width: 60px;
+    }
+    .sbp-inputs.sbp-inputs-dimensions-round li.four {
+        padding-left: 0;
+        float: none;
+        clear: both;
+        padding-top: 1px;
+        display: block;
+    }
+    #step-2 {
+        min-height: initial;
+    }
     .container.cbl-1 {
         padding-top: 25px;
         padding-bottom: 20px;
@@ -821,6 +960,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     }
     .aoc-valider {
         padding: 8px 20px;
+        display: block;
+        width: 100%;
+        margin-top: 30px;
     }
     .chs-buttons.s3 {
         padding: 0;
