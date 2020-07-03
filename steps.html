@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="steps-cont">
 <head>
 
   <title>Valuae</title>
@@ -9,590 +9,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-     body, html {
-       height: 100%;
-       margin: 0;
-       font-family: "Open Sans";
-       background-color: #f8f8f8;
-     }
-    
-    .telephone-top, .telephone-top:hover, .telephone-top:focus {
-      text-decoration: none;
-      color: #fff;
-      position: relative;
-      top: 10px;
-    }    
-    
-    .telephone-top img {
-      width: 24px;
-    }
-    
-    .telephone-top span {
-      font-size: 16px;
-      height: 22px;
-      line-height: 22px;
-    }
-    
-    .steps .logo-and-phone {
-      padding-top: 50px;
-      padding-bottom: 50px;
-      background-color: #0D0F23;
-    }
-
-     .steps .logo-and-phone .col-xs-6 {
-      height: 50px;
-      line-height: 50px;
-    }
-    
-    .regular-link, .regular-link:hover, .regular-link:focus {
-      text-decoration: none;
-    }
-    .brown-link {
-      color: #a98f5e;
-    }
-    .btn-brown {
-      background-color: #B5975E;
-      color: #fff;
-    }
-    .home-main-info {
-      color: #fff;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    .home-main-info-steps {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    
-    .home-main-info-steps p {
-      padding-top: 10px;
-      padding-bottom: 30px;
-      font-family: Arial;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 25px;
-    }
-     .home-main-info-steps p img,.home-main-info-steps p span.diamant-info {
-         display: inline-block;
-     }
-     .home-main-info-steps p img {
-         position: relative;
-         bottom: 13px;
-         margin-right: 10px;
-     }
-    .btn-brown {
-      border-radius: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      height: 40px;
-      line-height: 40px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    
-    .custom-bottom-links {
-      padding-top: 50px;
-      padding-bottom: 0px;
-      background-color: transparent;
-      position: relative;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-
-    .footer-bottom-text {
-      background-color: #0D0F23;
-      height: 60px;
-      line-height: 60px;
-      padding-top: 0px;
-      padding-bottom: 10px;
-    }
-    
-    .bottom-logo {
-      max-width: 90px;
-    }
-    
-    .flt-middle {
-      color: #fff;
-      text-align: center;
-    }
-    
-    .flt-certificate {      
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: auto;
-    }
-
-    /* progress bar */
-    .progress {
-      height: 10px;
-      border-radius: 0;
-      margin-bottom: 0px;
-    }
-
-    .progress-bar {
-        background-color: #B5975E;
-        height: 10px;
-        line-height: 10px;
-        -webkit-transition : width 1s ease;
-        -moz-transition : width 1s ease;
-        -o-transition : width 1s ease;
-        transition : width 1s ease;
-    }
-
-    /* top steps */
-    .top-steps-container {
-        height: auto;
-        line-height: 25px;
-        background-color: #fff;
-        color: #CBCBCB;
-        font-size: 14px;
-        padding-left: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-     .top-steps {
-         text-align: center;
-     }
-    .top-steps.active {
-        color: #00002C;
-    }
-
-    .s-btm {
-        font-weight: bold;
-    }
-
-    .steps h1 {
-        color: #00002C;
-        font-size: 50px;
-        font-family: "Open Sans";
-    }
-    .diamant-info {
-        color: #B5975E;
-        font-size: 16px;
-        padding-left: 30px;
-        padding-top: 30px;
-    }
-
-    /* diamonds shapes area*/
-    .choose-shape {
-        background-color: #fff;
-        padding: 35px;
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    .choose-shape h3 {
-        color: #00002C;
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .diamond-shapes-container {
-        padding: 20px;
-        border: 1px solid #CBCBCB;
-        height: 95px;
-        margin-bottom: 20px;
-    }
-
-     .diamond-shapes-container:hover {
-         border: 1px solid #B5975E;
-     }
-
-     .choose-shape .col-md-3 {
-         padding-left: 10px;
-         padding-right: 10px;
-     }
-
-     .choose-shape .dsc {
-         padding-left: 10px;
-     }
-
-     .mt-40 {
-         margin-top: 40px;
-     }
-
-     .return-buttons {
-         position: relative;
-         margin-bottom: 20px;
-     }
-
-     .btn.return {
-         display: none;
-         border: 1px solid #CBCBCB;
-         left: 7%;
-         top: 30px;
-         position: absolute;
-         background: none;
-         padding-top: 8px;
-         padding-bottom: 8px;
-         padding-left: 15px;
-         padding-right: 20px;
-     }
-/* step two buttons*/
-     .chs-buttons .btn {
-         width: 48%;
-         border: 1px solid #CBCBCB;
-         display: inline-block;
-         height: 40px;
-         line-height: 25px;
-         background-color: transparent;
-         outline: 0!important;
-         border-radius: 0;
-     }
-     .chs-buttons .btn:hover, .chs-buttons .btn:active, .chs-buttons .btn:focus {
-         border-color: #B5975E;
-         color: #B5975E;
-     }
-     .btn-oui {
-         margin-right: 2%;
-     }
-
-     .carats {
-         color: #00002C;
-     }
-     .amount-of-carats {
-         border: none;
-         border-bottom: 1px solid #979797;
-         color: #00002C;
-         width: 80px;
-         text-align: center;
-         padding-bottom: 5px;
-     }
-
-     .aoc-name {
-         padding-left: 30px;
-         padding-right: 30px;
-     }
-
-     .aoc-valider {
-         background: #FBFBFB;
-         border: 1px solid #DFDFDF;
-         color: #DFDFDF;
-         padding: 8px 40px;
-     }
-
-     #step-2, #step-3, #step-4 {
-         display: none;
-     }
-
-     .chs-buttons.s3 {
-         line-height: 20px;
-         padding: 15px;
-     }
-     .chs-buttons.s3 .btn {
-         width: 100%;
-         height: 137px;
-         line-height: 25px;
-         display: block;
-         white-space: normal;
-     }
-
-     .bc-table {
-         display: table;
-         width: 100%;
-         margin-bottom: 20px;
-     }
-     .brand-container {
-         height: 120px;
-         border: 1px solid #CBCBCB;
-         line-height: 25px;
-         background-color: transparent;
-         outline: 0!important;
-         border-radius: 0;
-         margin-bottom:20px;
-         display: table-cell;
-         vertical-align: middle;
-         padding: 15px;
-         text-align: center;
-     }
-     .brand-container:hover, .brand-container:active, .brand-container:focus {
-         border-color: #B5975E;
-         color: #B5975E;
-     }
-     .brand-container img {
-         width: auto;
-         max-height: 60px;
-         margin: 0 auto;
-         display: block;
-     }
-     .s-boxes .row {
-         margin-bottom: 20px;
-     }
-     .s-boxes input, .s-boxes select {
-         height: 45px;
-         line-height: 45px;
-         border: 1px solid #CBCBCB;
-         text-align: center;
-         width: 100%;
-         display: inline-block;
-         padding: 0 15px;
-         border-radius: 0;
-     }
-     .s-boxes input:hover, .s-boxes select:hover, .s-boxes input:focus, .s-boxes select:focus, .s-boxes input:active, .s-boxes select:active  {
-         outline: 0!important;
-     }
-     .s-boxes label {
-         width: 100%;
-     }
-     .s-boxes .to-next-step {
-         height: 45px;
-         line-height: 45px;
-         color: #B5975E;
-         border: 1px solid #B5975E;
-         width: 100%;
-
-     }
-     .s-boxes input#gia_report_number {
-         border-top: none;
-         border-left: none;
-         border-right: none;
-         background: none;
-         box-shadow: none;
-     }
-     .general-input-no-borders {
-         height: 45px;
-         line-height: 45px;
-         border: 1px solid #CBCBCB;
-         text-align: center;
-         width: 100%;
-         display: inline-block;
-         padding: 0 15px;
-         border-radius: 0;
-         border-top: none;
-         border-left: none;
-         border-right: none;
-         background: none;
-         box-shadow: none;
-         color: #00002C;
-     }
-     .general-input-no-borders:focus, .general-input-no-borders:hover, .general-input-no-borders:active {
-         outline: 0!important;
-         box-shadow: none;
-     }
-     #step-4 label {
-         position: relative;
-         top: 20px;
-         left: 30px;
-         font-family: Arial;
-         font-style: normal;
-         font-weight: normal;
-         font-size: 16px;
-         color: #00002C;
-     }
-     .main-submit-button {
-         border: 1px solid #B5975E;
-         height: 45px;
-         line-height: 45px;
-         padding: 0 15px;
-         width: 100%;
-         background-color: #fff;
-         text-transform: uppercase;
-         color: #B5975E;
-         margin-top: 30px;
-     }
-     #step-4 .choose-shape {
-         padding-left: 50px;
-         padding-right: 50px;
-     }
-     #step-4 .home-main-info-steps p img {
-         position: relative;
-         bottom: 30px;
-     }
-
-     .submit-loading {
-         background-color: #b5975e;
-         position: fixed;
-         top: 0;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         width: 100%;
-         color: #fff;
-         font-family: "Open Sans";
-         height: 100%;
-         display: none;
-     }
-     .in-submit-loading {
-         display: table-cell;
-         vertical-align: middle;
-         text-align: center;
-         width: 100%;
-     }
-     .submit-loading .header-centered {
-         font-size: 30px;
-     }
-     .submit-loading p {
-         font-size: 16px;
-     }
-     .insl-image-container {
-         position: relative;
-     }
-     .submit-loading img {
-         position: absolute;
-         top: -60px;
-         left: 50%;
-         width: 120px;
-         height: 120px;
-         margin:-60px 0 0 -60px;
-         -webkit-animation:spin 4s linear infinite;
-         -moz-animation:spin 4s linear infinite;
-         animation:spin 4s linear infinite;
-     }
-     @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-     @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-     @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-    @media (max-width: 480px) {
-        .home-main-info-steps {
-            padding-top: 0px;
-            padding-left: 5px;
-            max-width: 100%;
-            padding-bottom: 0;
-        }
-        .logo-and-phone .col-xs-4 {
-            padding-left: 10px;
-        }
-        .telephone-top {
-            top: 0;
-        }
-        .telephone-top span {
-            font-size: 14px;
-        }
-        .main-logo {
-            max-width: 100px;
-            position: relative;
-            bottom: 5px;
-        }
-        .steps .logo-and-phone {
-            padding-top: 35px;
-            padding-bottom: 25px;
-        }
-        .top-steps-container {
-            font-size: 11px;
-            padding-left: 0;
-        }
-        .top-steps-container .col-xs-3 {
-            padding: 0 10px;
-        }
-        .steps h1 {
-            font-size: 35px;
-            line-height: 48px;
-        }
-        .home-main-info-steps p {
-            position:relative;
-        }
-        .home-main-info-steps p img {
-            position: absolute;
-            top: 35%;
-        }
-        .diamant-info {
-            padding-left: 50px;
-            padding-top: 10px;
-        }
-        .choose-shape {
-            max-width: 100%;
-            padding: 25px;
-        }
-        .choose-shape h3 {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-        .diamond-shapes-container {
-            padding: 15px;
-            height: 66px;
-        }
-        .diamond-shapes-container img {
-            max-width: 37px;
-            max-height: 37px;
-        }
-        .choose-shape .dsc {
-            font-size: 12px;
-        }
-
-        .hidden-on-mobile {
-            display: none;
-        }
-        .flt-middle {
-            line-height: 30px;
-        }
-        .footer-bottom-text {
-            height: auto;
-            padding-top: 15px;
-        }
-        .return-buttons {
-            height: 45px;
-        }
-        #step-2 .home-main-info-steps, #step-3 .home-main-info-steps {
-            margin-bottom: 25px;
-        }
-        .aoc-valider {
-            padding: 8px 20px;
-        }
-        .chs-buttons.s3 {
-            padding: 0;
-        }
-        .chs-buttons.s3 .col-md-4 {
-            margin-bottom: 15px;
-        }
-        .brand-container {
-            height: 80px;
-            font-size: 12px;
-            line-height: 14px;
-        }
-        .brand-container img {
-            max-width: 100px;
-            max-height: 43px;
-        }
-        .chs-buttons.s3 .btn {
-            height: 100px;
-        }
-        .s-boxes .col-md-6 .col-md-6 {
-            padding: 0;
-        }
-        label[for="cut_grade"], label[for="color_grade"], label[for="symmetry"] {
-          margin-top: 20px;
-        }
-        #step-4 .home-main-info-steps p img {
-            position: absolute;
-        }
-        #step-4 .choose-shape {
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-        .main-submit-button {
-            font-size: 13px;
-        }
-
-        .submit-loading img {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            width: 80px;
-            height: 80px;
-            margin: -40px 0 0 -40px;
-        }
-        .in-submit-loading {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        .submit-loading .header-centered {
-            padding-bottom: 15px;
-            display: block;
-        }
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
-<body>
+<body class="steps-cont">
 <div class="steps">
 
     <!-- logo and phone -->
@@ -601,12 +21,12 @@
         <div class="container">
             <div class="col-xs-4 col-md-6 text-left">
                 <a href="/">
-                    <img class="main-logo" src="/img/logo.png" alt=""/>
+                    <img class="main-logo" src="logo.png" alt=""/>
                 </a>
             </div>
             <div class="col-xs-8 col-md-6 text-right">
                 <a class="telephone-top" href="#">
-                    <img class="top-phone" src="/img/phone.png" alt=""/>
+                    <img class="top-phone" src="phone.png" alt=""/>
                     <span>TEL : 0805 030 060</span>
                 </a>
             </div>
@@ -627,25 +47,25 @@
             <div class="row">
                 <div class="col-xs-3 col-md-3">
                     <div class="top-steps active" id="top-steps-1">
-                        <div class="s-top">Étape 1 </div>
+                        <div class="s-top"><span class="etape" id="etape-1">Étape 1</span></div>
                         <div class="s-btm">La forme</div>
                     </div>
                 </div>
                 <div class="col-xs-3 col-md-3 ">
                     <div class="top-steps" id="top-steps-2">
-                        <div class="s-top">Étape 2 </div>
+                        <div class="s-top"><span class="etape" id="etape-2">Étape 2</span></div>
                         <div class="s-btm">Le poids</div>
                     </div>
                 </div>
                 <div class="col-xs-3 col-md-3 ">
                     <div class="top-steps" id="top-steps-3">
-                        <div class="s-top">Étape 3 </div>
+                        <div class="s-top"><span class="etape" id="etape-3">Étape 3</span></div>
                         <div class="s-btm">Le certifica</div>
                     </div>
                 </div>
                 <div class="col-xs-3 col-md-3 ">
                     <div class="top-steps" id="top-steps-4">
-                        <div class="s-top">Étape 4 </div>
+                        <div class="s-top"><span class="etape" id="etape-4">Étape 4</span></div>
                         <div class="s-btm">Vos coordonn</div>
                     </div>
                 </div>
@@ -656,13 +76,13 @@
 
 
     <div class="return-buttons">
-        <button class="btn return" id="return-1"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
-        <button class="btn return" id="return-2"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
-        <button class="btn return" id="return-3"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-1" type="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-2" type="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
+        <button class="btn return" id="return-3" type="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> RETOUR</button>
     </div>
 
 
-    <form action="/">
+    <form action="/" class="current_slider_form">
 
         <!-- STEP ONE -->
 
@@ -672,10 +92,10 @@
                 <div class="home-main-info-steps">
                     <h1>La forme de votre diamant</h1>
                     <p>
-                        <img src="/img/circle_i.png" alt="">
-              <span class="diamant-info">
-                  Nous avons besoin de quelques informations à propos de <br> votre diamant pour l’évaluer dans les meilleures conditions.
-              </span>
+                          <img src="circle_i.png" alt="">
+                          <span class="diamant-info">
+                              Nous avons besoin de quelques informations à propos de <br> votre diamant pour l’évaluer dans les meilleures conditions.
+                          </span>
                     </p>
                 </div>
 
@@ -693,11 +113,11 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Rond.png" alt="">
-                        <span class="dsc">
-                            Rond
-                        </span>
+                            <div class="diamond-shapes-container to-next-step round-diamond" data-ns="2">
+                                <img src="Rond.png" alt="">
+                                <span class="dsc">
+                                    Rond
+                                </span>
                             </div>
 
                         </div>
@@ -705,10 +125,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Princess.png" alt="">
-                        <span class="dsc">
-                            Princesse
-                        </span>
+                                <img src="Princess.png" alt="">
+                                <span class="dsc">
+                                    Princesse
+                                </span>
                             </div>
 
                         </div>
@@ -716,10 +136,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Coussin.png" alt="">
-                        <span class="dsc">
-                            Coussin
-                        </span>
+                                <img src="Coussin.png" alt="">
+                                <span class="dsc">
+                                    Coussin
+                                </span>
                             </div>
 
                         </div>
@@ -727,10 +147,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Emeraude.png" alt="">
-                        <span class="dsc">
-                            Emeraude
-                        </span>
+                                <img src="Emeraude.png" alt="" class="emeraude">
+                                <span class="dsc">
+                                    Emeraude
+                                </span>
                             </div>
 
                         </div>
@@ -738,10 +158,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Poire.png" alt="">
-                        <span class="dsc">
-                            Poire
-                        </span>
+                                <img src="Poire.png" alt="" class="poire">
+                                <span class="dsc">
+                                    Poire
+                                </span>
                             </div>
 
                         </div>
@@ -749,10 +169,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Marquise.png" alt="">
-                        <span class="dsc">
-                            Marquise
-                        </span>
+                                <img src="Marquise.png" alt="" class="marquise">
+                            <span class="dsc">
+                                Marquise
+                            </span>
                             </div>
 
                         </div>
@@ -760,10 +180,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Ovale.png" alt="">
-                        <span class="dsc">
-                            Ovale
-                        </span>
+                                <img src="Ovale.png" alt="" class="ovale">
+            <span class="dsc">
+                Ovale
+            </span>
                             </div>
 
                         </div>
@@ -771,10 +191,10 @@
                         <div class="col-xs-6 col-md-3 ">
 
                             <div class="diamond-shapes-container to-next-step" data-ns="2">
-                                <img src="/img/Coeur.png" alt="">
-                        <span class="dsc">
-                            Coeur
-                        </span>
+                                <img src="Coeur.png" alt="" class="coeur">
+            <span class="dsc cdsc">
+                Coeur
+            </span>
                             </div>
 
                         </div>
@@ -782,7 +202,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- STEP TWO -->
         <div class="step" id="step-2">
@@ -803,22 +222,40 @@
                     </h3>
 
                     <div class="chs-buttons">
-                        <button class="btn btn-oui">Oui</button>
-                        <button class="btn btn-non">Non</button>
+                        <button class="btn btn-oui connaissez-oui subpoint-trigger" type="button" data-subpointtoshow="1">Oui</button>
+                        <button class="btn btn-non connaissez-non subpoint-trigger" type="button" data-subpointtoshow="2">Non</button>
                     </div>
 
                 </div>
 
-                <div class="choose-shape mt-40">
+                <div class="choose-shape mt-40 sub-point" id="sub-point-1">
                     <h3>
                         Merci de renseigner le poids de votre diamant en carat :
                     </h3>
 
                     <div class="carats">
 
-                        <input type="number" class="amount-of-carats" value="15" name="amount-of-carats">
+                        <input type="text" class="spec-no-border-inp" value="15" name="amount-of-carats">
 
                         <span class="aoc-name">carats</span>
+
+                        <button class="aoc-valider to-next-step" data-ns="3" type="button">VALIDER</button>
+
+                    </div>
+                </div>
+
+                <div class="choose-shape mt-40 sub-point" id="sub-point-2">
+                    <h3>
+                        Merci de renseigner les dimensions de votre diamant :
+                    </h3>
+
+                    <div class="carats">
+
+                        <input type="number" class="spec-no-border-inp" value="15" name="diameter">
+
+                        <span class="aoc-name">mm</span>
+
+                        <input type="number" class="spec-no-border-inp" value="15" name="diameter">
 
                         <button class="aoc-valider to-next-step" data-ns="3" type="button">VALIDER</button>
 
@@ -845,14 +282,14 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn" type="button">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3">
                                     J’ai un certificat gemmologique
                                 </button>
 
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn" type="button">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="4">
                                     Je possède une attestation d’un bijoutier ou d’un expert
                                     (en vue d’assurance ou autre…)
                                 </button>
@@ -860,7 +297,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn" type="button">
+                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="5">
                                     Je n’ai aucun détail sur mon diamant
                                 </button>
 
@@ -870,7 +307,7 @@
                     </div>
                 </div>
 
-                <div class="choose-shape mt-40">
+                <div class="choose-shape mt-40 sub-point" id="sub-point-3">
                     <h3>
                         Quel est votre certificat ?
                     </h3>
@@ -880,7 +317,7 @@
                             <div class="col-xs-6 col-md-3">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/gia.png" alt="">
+                                        <img src="gia.png" alt="">
                                     </div>
                                 </div>
 
@@ -888,7 +325,7 @@
                             <div class="col-xs-6 col-md-3">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/hrd.png" alt="">
+                                        <img src="hrd.png" alt="">
                                     </div>
                                 </div>
 
@@ -896,7 +333,7 @@
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/igi.png" alt="">
+                                        <img src="igi.png" alt="">
                                     </div>
                                 </div>
 
@@ -904,7 +341,7 @@
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/lfg.png" alt="">
+                                        <img src="lfg.png" alt="">
                                     </div>
                                 </div>
 
@@ -912,7 +349,7 @@
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/gil.png" alt="">
+                                        <img src="gil.png" alt="">
                                     </div>
                                 </div>
 
@@ -920,7 +357,7 @@
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/aig.png" alt="">
+                                        <img src="aig.png" alt="">
                                     </div>
                                 </div>
 
@@ -928,7 +365,7 @@
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
                                     <div class="brand-container">
-                                        <img src="/img/igl.png" alt="">
+                                        <img src="igl.png" alt="">
                                     </div>
                                 </div>
 
@@ -949,7 +386,7 @@
                 </div>
 
 
-                <div class="choose-shape mt-40">
+                <div class="choose-shape mt-40 sub-point" id="sub-point-4">
                     <h3>
                         Mon certificat GIA
                     </h3>
@@ -1056,8 +493,8 @@
                                 <div class="col-md-6">
                                 </div>
                                 <div class="col-md-6">
-                                  <button class="to-next-step" data-ns="4" type="button">VALIDER</button>
-                                 </div>
+                                    <button class="to-next-step" data-ns="4" type="button">VALIDER</button>
+                                </div>
                             </div>
                         </div>
 
@@ -1067,6 +504,7 @@
             </div>
         </div>
 
+
         <!-- STEP FOUR -->
 
         <div class="step" id="step-4">
@@ -1075,12 +513,12 @@
                 <div class="home-main-info-steps">
                     <h1>Vos cordonnées</h1>
                     <p>
-                        <img src="/img/circle_i.png" alt="">
-              <span class="diamant-info">
-                  Nous aurons besoin de vos informations personnelles <br>
+                        <img src="circle_i.png" alt="">
+                        <span class="diamant-info">
+      Nous aurons besoin de vos informations personnelles <br>
 pour prendre contact avec vous lors du rachat de votre diamant. <br>
 Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci.
-              </span>
+                         </span>
                     </p>
                 </div>
 
@@ -1165,7 +603,6 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
             </div>
         </div>
 
-
     </form>
 
 
@@ -1177,7 +614,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
         <div class="container">
           <div class="col-xs-12 col-md-2 hidden-on-mobile">
             <a href="#">
-              <img class="bottom-logo" src="/img/logo.png" alt=""/>
+              <img class="bottom-logo" src="logo.png" alt=""/>
             </a>
           </div>
           <div class="col-xs-8 col-md-8">
@@ -1190,7 +627,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
           </div>
         </div>
       </div>
-      <img class="flt-certificate" src="/img/bottom_angle_certificate.png" alt=""/>
+      <img class="flt-certificate" src="bottom_angle_certificate.png" alt=""/>
     </div>
 </div>
 
@@ -1201,7 +638,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
 
     <div class="in-submit-loading">
         <div class="insl-image-container">
-            <img src="/img/submit_stone.png" alt=""/>
+            <img src="submit_stone.png" alt=""/>
         </div>
 
         <span class="header-centered">Évaluation de votre diamant en cours…</span>
@@ -1213,72 +650,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
 
 </div>
 <script>
-$(document).ready(function() {
 
-    // step forward click
-    $('.to-next-step').click(function() {
-
-        var _ns = parseInt($(this).data('ns'));
-        var _ps = _ns - 1;
-
-        // next to step 2
-        $('#top-steps-'+_ns).addClass('active');
-
-        // change progress bar
-        $('.progress-bar').css({'width': (20 * _ns)+'%'});
-
-        // show button return to step one
-        $('.btn.return').fadeOut('slow');
-        $('#return-'+_ps).fadeIn('slow');
-
-        // change content
-        $('#step-'+_ps).hide();
-        $('#step-'+_ns).show("slide", { direction: "right" }, 1000);
-
-    });
-
-    // step back click
-    $('.btn.return').click(function() {
-
-        var _prev_step_num = parseInt($(this).attr('id').replace('return-', ''));
-        var _current_step_num = _prev_step_num +1;
-        var _prev_prev_step_num = _prev_step_num - 1;
-
-        $('#step-'+_current_step_num).hide("slide", { direction: "right" }, 1000);
-        $('#step-'+_prev_step_num).show("slide", { direction: "left" }, 1000);
-
-        $('.btn.return').fadeOut('slow');
-
-        // show correct prev step button
-        if ($('#return-' + _prev_prev_step_num).length > 0) {
-            $('#return-' + _prev_prev_step_num).fadeIn('slow');
-        }
-
-        // change progress bar
-        $('.progress-bar').css({'width': (20 * _prev_step_num)+'%'});
-
-
-        // remove active class from top step
-        $('#top-steps-'+_current_step_num).removeClass('active');
-
-    });
-
-
-    $('.main-submit-button').click(function() {
-
-        $('.progress-bar').css({'width': (20 * 5)+'%'});
-
-        setTimeout(function() {$('.submit-loading').css({'display': 'table'});}, 1000);
-
-
-        setTimeout(function() {
-            //$('.submit-loading').hide();
-            //$('.progress-bar').css({'width': (20 * 4)+'%'});
-        }, 5000);
-
-    });
-
-});
 </script>
 
 </body>
