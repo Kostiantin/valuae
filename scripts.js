@@ -154,4 +154,15 @@ console.log(shapeOfDiamond);
         }
     });
 
+    // check carats
+
+    $('.check-carats').click(function() {
+
+        var _carats_value = parseInt($(this).parents('.with-validation-inputs:first').find('input[name="amount-of-carats"]').val());
+
+        if (_carats_value < 1) {
+            location.href = '/valuae_new/sorry.html';
+        }
+
+    });
 });
