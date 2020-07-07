@@ -409,28 +409,28 @@
                         <div class="row">
                             <div class="col-xs-6 col-md-3">
                                 <div class="bc-table">
-                                    <div class="brand-container">
+                                    <div class="brand-container lab" id="lab-gia">
                                         <img src="gia.png" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <div class="bc-table">
-                                    <div class="brand-container">
+                                    <div class="brand-container lab" id="lab-hrd">
                                         <img src="hrd.png" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
-                                    <div class="brand-container">
+                                    <div class="brand-container lab" id="lab-igi">
                                         <img src="igi.png" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
-                                    <div class="brand-container">
+                                    <div class="brand-container lab" id="lab-lfg">
                                         <img src="lfg.png" alt="">
                                     </div>
                                 </div>
@@ -468,120 +468,616 @@
                 </div>
 
 
-                <div class="choose-shape mt-20 sub-point sub-point-3" id="sub-point-3-2">
+                <!-- LABORATORIES CERTS FORMS -->
+
+                <!-- GIA-->
+
+                <div class="choose-shape mt-20 sub-point sub-point-3 lab-form lab-form-gia" id="sub-point-3-2" >
+
                     <h3>
                         Mon certificat GIA
                     </h3>
 
-                    <div class="s-boxes">
+                    <div class="s-boxes with-validation-inputs" id="s-box-gia">
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <div class="col-md-6">
                                     <label for="gia_report_number" class="control-label">GIA Report Number</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="number" name="gia_report_number" id="gia_report_number" class="form-control" value="" placeholder="12345">
+                                    <input type="number" name="report_number" id="gia_report_number" class="form-control" value="" placeholder="">
                                 </div>
-
-
                             </div>
                             <div class="col-xs-12 col-md-6">
 
                             </div>
                         </div>
                         <div class="row">
+
                             <div class="col-xs-12 col-md-6">
                                 <div class="col-md-6">
-                                    <label for="clarity_grade">Clarity Grade</label>
+                                    <label for="gia_color_grade">Color Grade</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="clarity_grade" id="clarity_grade">
-                                        <option value="1">FL/LF</option>
+                                    <select name="color_grade" id="gia_color_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="Autre">Autre</option>
                                     </select>
                                 </div>
+                            </div>
 
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="gia_clarity_grade">Clarity Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="clarity_grade" id="gia_clarity_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">IF</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="I1">I1</option>
+                                        <option value="I2">I2</option>
+                                        <option value="I3">I3</option>
+                                    </select>
+                                </div>
+                            </div>
 
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="gia_cut_grade">Cut Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="cut_grade" id="gia_cut_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="gia_polish">Polish</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="polish" id="gia_polish">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="gia_symmetry">Symmetry</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="symmetry" id="gia_symmetry">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-xs-12 col-md-6">
                                 <div class="col-md-6">
-                                    <label for="color_grade">Color Grade</label>
+                                    <label for="gia_fluorescence">Fluorescence</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="color_grade" id="color_grade">
-                                        <option value="1">A</option>
+                                    <select name="fluorescence" id="gia_fluorescence">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="None">None</option>
+                                        <option value="Faint">Faint</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Strong">Strong</option>
+                                        <option value="Very Strong">Very Strong</option>
                                     </select>
                                 </div>
-
-
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
-                                <div class="col-md-6">
-                                    <label for="polish">Polish</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <select name="polish" id="polish">
-                                        <option value="1">Excellent</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div class="col-md-6">
-                                    <label for="cut_grade">Cut Grade</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <select name="cut_grade" id="cut_grade">
-                                        <option value="1">Excellent</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6">
-                                <div class="col-md-6">
-                                    <label for="fluorescence">Fluorescence</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <select name="fluorescence" id="fluorescence">
-                                        <option value="1">None</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <div class="col-md-6">
-                                    <label for="symmetry">Symmetry</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <select name="symmetry" id="symmetry">
-                                        <option value="1">Excellent</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6">
-
                             </div>
                             <div class="col-xs-12 col-md-6 text-right">
                                 <div class="col-md-6">
                                 </div>
                                 <div class="col-md-6">
-                                    <button class="to-next-step" data-ns="4" type="button">VALIDER</button>
+                                    <button class="to-next-step" data-ns="4" type="button" disabled="disabled">VALIDER</button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
+
+                <!--HRD-->
+                <div class="choose-shape mt-20 sub-point sub-point-3 lab-form lab-form-hrd" id="sub-point-3-3" >
+
+                    <h3>
+                        Mon certificat HRD
+                    </h3>
+
+                    <div class="s-boxes with-validation-inputs" id="s-box-hrd">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_report_number" class="control-label">HRD Report Number</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="report_number" id="hrd_report_number" class="form-control" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_color_grade">Color Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="color_grade" id="hrd_color_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_clarity_grade">Clarity Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="clarity_grade" id="hrd_clarity_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">LC</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="I1">P1</option>
+                                        <option value="I2">P2</option>
+                                        <option value="I3">P3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_cut_grade">Cut Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="cut_grade" id="hrd_cut_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_polish">Polish</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="polish" id="hrd_polish">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_symmetry">Symmetry</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="symmetry" id="hrd_symmetry">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="hrd_fluorescence">Fluorescence</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="fluorescence" id="hrd_fluorescence">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="None">None</option>
+                                        <option value="Faint">Faint</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Strong">Strong</option>
+                                        <option value="Very Strong">Very Strong</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                            </div>
+                            <div class="col-xs-12 col-md-6 text-right">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="to-next-step" data-ns="4" type="button" disabled="disabled">VALIDER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--IGI-->
+                <div class="choose-shape mt-20 sub-point sub-point-3 lab-form lab-form-igi" id="sub-point-3-4" >
+
+                    <h3>
+                        Mon certificat IGI
+                    </h3>
+
+                    <div class="s-boxes with-validation-inputs" id="s-box-igi">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_report_number" class="control-label">IGI Report Number</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="report_number" id="igi_report_number" class="form-control" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_color_grade">Color Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="color_grade" id="igi_color_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_clarity_grade">Clarity Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="clarity_grade" id="igi_clarity_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">IF</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="I1">I1</option>
+                                        <option value="I2">I2</option>
+                                        <option value="I3">I3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_cut_grade">Cut Grade</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="cut_grade" id="igi_cut_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_polish">Polish</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="polish" id="igi_polish">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_symmetry">Symmetry</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="symmetry" id="igi_symmetry">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Very Good">Very Good</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Fair">Fair</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="igi_fluorescence">Fluorescence</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="fluorescence" id="igi_fluorescence">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="None">None</option>
+                                        <option value="Faint">Very Slight</option>
+                                        <option value="Medium">Slight</option>
+                                        <option value="Strong">Medium</option>
+                                        <option value="Very Strong">Strong</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                            </div>
+                            <div class="col-xs-12 col-md-6 text-right">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="to-next-step" data-ns="4" type="button" disabled="disabled">VALIDER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--LFG-->
+                <div class="choose-shape mt-20 sub-point sub-point-3 lab-form lab-form-lfg" id="sub-point-3-5" >
+
+                    <h3>
+                        Mon certificat LFG
+                    </h3>
+
+                    <div class="s-boxes with-validation-inputs" id="s-box-lfg">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_report_number" class="control-label">LFG Report Number</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="report_number" id="lfg_report_number" class="form-control" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_color_grade">Couleur</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="color_grade" id="lfg_color_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_clarity_grade">Pureté</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="clarity_grade" id="lfg_clarity_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">IF</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="I1">P1</option>
+                                        <option value="I2">P2</option>
+                                        <option value="I3">P3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_cut_grade">Taille</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="cut_grade" id="lfg_cut_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente</option>
+                                        <option value="Very Good">Très Bonne</option>
+                                        <option value="Good">Bonne</option>
+                                        <option value="Fair">Passable</option>
+                                        <!--<option value="Poor">Poor</option>-->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_polish">Poli</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="polish" id="lfg_polish">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente</option>
+                                        <option value="Very Good">Très Bonne</option>
+                                        <option value="Good">Bonne</option>
+                                        <option value="Fair">Passable</option>
+                                       <!-- <option value="Poor">Poor</option>-->
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_symmetry">Symétrie</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="symmetry" id="lfg_symmetry">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente</option>
+                                        <option value="Very Good">Très Bonne</option>
+                                        <option value="Good">Bonne</option>
+                                        <option value="Fair">Passable</option>
+                                       <!-- <option value="Poor">Poor</option>-->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="lfg_fluorescence">Fluorescence</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="fluorescence" id="lfg_fluorescence">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="None">Aucune</option>
+                                        <option value="Faint">Faible</option>
+                                        <option value="Medium">Moyenne</option>
+                                        <option value="Strong">Forte</option>
+                                        <!--<option value="Very Strong">Very Strong</option>-->
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                            </div>
+                            <div class="col-xs-12 col-md-6 text-right">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="to-next-step" data-ns="4" type="button" disabled="disabled">VALIDER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>
@@ -609,7 +1105,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
             <!-- under main info -->
             <div class="container">
 
-                <div class="choose-shape">
+                <div class="choose-shape with-validation-inputs final-user-form">
 
                     <div class="row">
 
@@ -660,7 +1156,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
 
                         </div>
                         <div class="col-xs-12 col-md-6 ">
-                            <button class="main-submit-button" type="button">Obtenir l’estimation de mon diamant</button>
+                            <button class="main-submit-button aoc-valider to-next-step" type="button" disabled="disabled">Obtenir l’estimation de mon diamant</button>
                         </div>
 
                     </div>
@@ -684,7 +1180,7 @@ Nous n’utiliserons pas vos données personnelles à d'autres fins que celle-ci
               <img class="bottom-logo" src="logo.png" alt=""/>
             </a>
           </div>
-          <div class="col-xs-8 col-md-8">
+          <div class="col-xs-12 col-md-8">
             <div class="flt-middle">
               Mentions légales - Données personnelles - Gestion des cookies
             </div>

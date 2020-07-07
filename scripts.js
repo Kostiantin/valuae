@@ -26,7 +26,7 @@ $(document).ready(function() {
             else {
                 shapeOfDiamond = 'square';
             }
-console.log(shapeOfDiamond);
+
         }
 
         var _ns = parseInt($(this).data('ns'));
@@ -59,6 +59,10 @@ console.log(shapeOfDiamond);
 
         // hide sub points
         $('#sub-point-2-1, #sub-point-2-2, #sub-point-2-3, #sub-point-2-4, #sub-point-3-1, #sub-point-3-2, #sub-point-3-3, #sub-point-3-4').hide();
+
+        // remove active classes:
+        $('.brand-container.lab').removeClass('l-active');
+        $('.subpoint-trigger').removeClass('active');
 
         var _prev_step_num = parseInt($(this).attr('id').replace('return-', ''));
         var _current_step_num = _prev_step_num + 1;
@@ -134,24 +138,43 @@ console.log(shapeOfDiamond);
 
     });
 
-
-    // validation on step 2
-    $('.with-validation-inputs input').keyup(function() {
+    // validate all values entered
+    function sBoxValidation(elem) {
 
         var _errors_in_block = false;
 
-        $(this).parents('.with-validation-inputs:first').find('input').each(function() {
+        $(elem).parents('.with-validation-inputs:first').find('input, select').each(function() {
             if ($(this).val() == '') {
                 _errors_in_block = true;
             }
         });
 
         if (_errors_in_block == false) {
-            $(this).parents('.with-validation-inputs:first').find('button.aoc-valider').removeAttr('disabled');
+            $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').removeAttr('disabled');
         }
         else {
-            $(this).parents('.with-validation-inputs:first').find('button.aoc-valider').attr('disabled', true);
+            $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').attr('disabled', true);
         }
+    }
+
+    // validation on step 2
+    $('.with-validation-inputs input').keyup(function() {
+
+        sBoxValidation(this);
+
+    });
+
+
+    // validation on step 3
+    $('.s-boxes input').keyup(function(){
+
+        sBoxValidation(this);
+
+    });
+    $('.s-boxes select').change(function(){
+
+        sBoxValidation(this);
+
     });
 
     // check carats
@@ -165,4 +188,27 @@ console.log(shapeOfDiamond);
         }
 
     });
+
+
+    // choose lab will show form
+
+    $('.brand-container.lab').click(function() {
+
+        $('.brand-container.lab').removeClass('l-active');
+
+        $(this).addClass('l-active');
+
+        var _id_of_lab = $(this).attr('id').replace('lab-', '');
+
+        $('.lab-form').hide();
+
+        $('.lab-form-' + _id_of_lab).show();
+
+
+
+
+
+    });
+
+
 });
