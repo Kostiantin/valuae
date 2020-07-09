@@ -85,7 +85,7 @@
     <form action="/" class="current_slider_form">
 
         <!-- STEP ONE -->
-
+        <h3 class="head-st" id="head-st-1">Step One</h3>
         <div class="step" id="step-1">
             <!-- main page info -->
             <div class="container">
@@ -204,6 +204,7 @@
         </div>
 
         <!-- STEP TWO -->
+        <h3 class="head-st" id="head-st-2">Step Two</h3>
         <div class="step" id="step-2">
 
             <!-- main page info -->
@@ -358,6 +359,7 @@
         </div>
 
         <!-- STEP THREE -->
+        <h3 class="head-st" id="head-st-3">Step Three</h3>
         <div class="step" id="step-3">
             <div class="container">
                 <div class="home-main-info-steps">
@@ -382,7 +384,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3-2">
+                                <button class="btn subpoint-trigger show-mon-form" type="button" data-subpointtoshow="3-2">
                                     Je possède une attestation d’un bijoutier ou d’un expert
                                     (en vue d’assurance ou autre…)
                                 </button>
@@ -390,7 +392,7 @@
                             </div>
                             <div class="col-xs-12 col-md-4">
 
-                                <button class="btn subpoint-trigger" type="button" data-subpointtoshow="3-3">
+                                <button class="btn subpoint-trigger move-to-user-form" type="button" data-subpointtoshow="3-3">
                                     Je n’ai aucun détail sur mon diamant
                                 </button>
 
@@ -458,7 +460,7 @@
                             </div>
                             <div class="col-xs-6 col-md-3 ">
                                 <div class="bc-table">
-                                    <div class="brand-container">
+                                    <div class="brand-container lab" id="lab-mon">
                                         J’ai un autre certificat gemmologique
                                     </div>
                                 </div>
@@ -469,6 +471,165 @@
 
 
                 <!-- LABORATORIES CERTS FORMS -->
+
+
+                <!-- MON -->
+
+                <div class="choose-shape mt-20 sub-point sub-point-3 lab-form lab-form-mon" id="sub-point-3-6" >
+
+                    <h3>
+                        Mon certificat
+                    </h3>
+
+                    <div class="s-boxes with-validation-inputs" id="s-box-mon">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_report_number" class="control-label">Nom du laboratoire</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="report_number" id="lab_name" class="form-control" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_report_number" class="control-label">N&#176; Certificat</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="report_number" id="mon_report_number" class="form-control" value="" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_clarity_grade">Pureté</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="clarity_grade" id="mon_clarity_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="FL">FL</option>
+                                        <option value="IF">IF</option>
+                                        <option value="VVS1">VVS1</option>
+                                        <option value="VVS2">VVS2</option>
+                                        <option value="VS1">VS1</option>
+                                        <option value="VS2">VS2</option>
+                                        <option value="SI1">SI1</option>
+                                        <option value="SI2">SI2</option>
+                                        <option value="I1">P1</option>
+                                        <option value="I2">P2</option>
+                                        <option value="I3">P3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_color_grade">Couleur</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="color_grade" id="mon_color_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="G">G</option>
+                                        <option value="H">H</option>
+                                        <option value="I">I</option>
+                                        <option value="J">J</option>
+                                        <option value="K">K</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_polish">Poli/Polish</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="polish" id="mon_polish">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente / Excellent</option>
+                                        <option value="Very Good">Très Bonne / Very Good</option>
+                                        <option value="Good">Bonne / Good</option>
+                                        <option value="Fair">Passable / Fair</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_cut_grade">Taille / Cut</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="cut_grade" id="mon_cut_grade">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente / Excellent</option>
+                                        <option value="Very Good">Très Bonne / Very Good</option>
+                                        <option value="Good">Bonne / Good</option>
+                                        <option value="Fair">Passable / Fair</option>
+                                       <!-- <option value="Poor">Poor</option>-->
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_fluorescence">Fluorescence</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="fluorescence" id="mon_fluorescence">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="None">Aucune / None</option>
+                                        <option value="Faint">Faible / Faint</option>
+                                        <option value="Medium">Moyenne / Medium</option>
+                                        <option value="Strong">Forte / Strong</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                                <div class="col-md-6">
+                                    <label for="mon_symmetry">Symétrie</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <select name="symmetry" id="mon_symmetry">
+                                        <option value="">Je ne sais pas</option>
+                                        <option value="Excellent">Excellente / Excellent</option>
+                                        <option value="Very Good">Très Bonne / Very Good</option>
+                                        <option value="Good">Bonne / Good</option>
+                                        <option value="Fair">Passable / Fair</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                            </div>
+                            <div class="col-xs-12 col-md-6 text-right">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="to-next-step" data-ns="4" type="button" disabled="disabled">VALIDER</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- GIA-->
 
@@ -1084,7 +1245,7 @@
 
 
         <!-- STEP FOUR -->
-
+        <h3 class="head-st" id="head-st-4">Step Four</h3>
         <div class="step" id="step-4">
             <!-- main page info -->
             <div class="container">

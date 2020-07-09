@@ -495,10 +495,16 @@ input:focus, textarea:focus, select:focus, button:focus {
     color: #DFDFDF;
 }
 #step-2, #step-3, #step-4 {
-    display: none;
+   /* display: none;*/
 }
-#step-2 {
-    min-height: 650px;
+#step-1, #step-2, #step-3, #step-4 {
+    min-height: 0px;
+}
+#step-3 {
+
+}
+.head-st {
+    display: none;
 }
 .chs-buttons.s3 {
     line-height: 20px;
@@ -540,7 +546,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: block;
 }
 .s-boxes .row {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .s-boxes input, .s-boxes select {
     height: 51px;
@@ -851,6 +857,11 @@ ul.sbp-inputs li {
     font-size: 16px;
     color: #00002C;
 }
+form.current_slider_form {
+    min-height: 700px;
+}
+div[data-acc-content] {display:none; }
+
 @media (max-width: 480px) {
 
     #step-4 label {

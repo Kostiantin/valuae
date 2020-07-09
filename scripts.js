@@ -42,11 +42,18 @@ $(document).ready(function() {
         // change progress bar
         $('.progress-bar').css({'width': _etape_position_left+'px'});
 
-        // change content
+        $('#head-st-'+_ns).click();
 
-        $('#step-'+_ps).slideUp('1500');
-        $('#step-'+_ns).slideDown('1500');
+        var _first_step_height = $('#step-1').css('height');
 
+        if (_ns == '3') {
+            setTimeout(function() {
+                $('#step-3').css('height','auto');
+            }, 1500);
+        }
+        else {
+            $('#step-3').css('height',_first_step_height);
+        }
 
         // show button return to step one
         $('.btn.return').fadeOut('slow');
@@ -72,8 +79,8 @@ $(document).ready(function() {
             $('.return-buttons').hide();
         }
 
-        $('#step-'+_current_step_num).slideUp('1500');
-        $('#step-'+_prev_step_num).slideDown('1500');
+        /*$('#step-'+_current_step_num).slideUp('1500');
+        $('#step-'+_prev_step_num).slideDown('1500');*/
 
         $('.btn.return').fadeOut('slow');
 
@@ -89,6 +96,20 @@ $(document).ready(function() {
 
         // change progress bar
         $('.progress-bar').css({'width': _etape_position_left+'px'});
+
+        $('#head-st-'+_prev_step_num).click();
+
+
+        var _first_step_height = $('#step-1').css('height');
+
+        if (_prev_step_num == '3') {
+            setTimeout(function() {
+                $('#step-3').css('height','auto');
+            }, 1500);
+        }
+        else {
+            $('#step-3').css('height',_first_step_height);
+        }
 
 
         // remove active class from top step
@@ -204,11 +225,23 @@ $(document).ready(function() {
 
         $('.lab-form-' + _id_of_lab).show();
 
+    });
 
-
-
-
+    $('.show-mon-form').click(function() {
+        $('#lab-mon').click();
     });
 
 
+    // activate accordion form
+    $( "form.current_slider_form" ).accordion({
+        collapsible: true
+    });
+
+
+    // when user don't know and clicks on 'Je n’ai aucun d?tail sur mon diamant'
+    $('.move-to-user-form').click(function() {
+        $('#head-st-4').click();
+        $('#return-2').hide();
+        $('#return-3').show();
+    });
 });
