@@ -290,8 +290,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     border-radius: 0;
     padding-left: 20px;
     padding-right: 20px;
-    height: 40px;
-    line-height: 40px;
+    height: 51px;
+    line-height: 51px;
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -862,6 +862,100 @@ form.current_slider_form {
 }
 div[data-acc-content] {display:none; }
 
+/*results page*/
+.b-results .custom-bottom-links {
+    bottom: 0;
+}
+.home-main-info.results p {
+    width: 45%;
+}
+.results-info {
+    width: 57%;
+    position: relative;
+}
+.results-info img {
+    position: relative;
+    bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    left: 0;
+}
+.results-info span {
+    color: #B5975E;
+    font-size: 48px;
+    padding-top: 0;
+    font-family: 'Open Sans';
+    line-height: 24px;
+    display: inline-block;
+}
+.results-info span strong {
+    font-family: 'Open Sans Regular';
+}
+.btn-brown.regular-link {
+    text-transform: uppercase;
+    color: #0D0F23;
+    font-size: 14px;
+    width: 283px;
+    height: 59px;
+    line-height: 59px;
+    margin-top: 40px;
+    font-family: 'Open Sans Regular';
+}
+.results-info .price-middle {
+    color: #fff;
+    font-size: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.price-from {
+    color: #B5975E;
+    font-size: 48px;
+    font-family: 'Open Sans Regular';
+    margin-left: 15px;
+}
+.results-info span.price-from, .results-info span.price-to {
+    border-bottom: 1px solid #2f2c29;
+    line-height: 60px;
+}
+.middle-grey-area {
+    background-color: #F8F8F8;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+.mga {
+    float: left;
+    margin-right: 20px;
+    background-color: #fff;
+    height: 87px;
+    padding: 25px;
+    color: #00002C;
+    font-family: 'Open Sans Regular';
+    font-weight: bold;
+    min-width: 215px;
+}
+.mga.mga-1 {
+    background-color: transparent;
+    padding-left: 0;
+}
+.mga-txt-1 {
+
+}
+.mga-txt-2 {
+    color: #b5975e;
+}
+.mga-txt-container {
+    display: inline-block;
+    width: 110px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.mga img {
+    position: relative;
+    bottom: 10px;
+}
+.choose-shape .dsc {
+    font-size: 16px;
+}
 @media (max-width: 480px) {
 
     #step-4 label {
@@ -883,7 +977,10 @@ div[data-acc-content] {display:none; }
     .s-boxes button.to-next-step {
         margin-top: 20px;
     }
-    .home-main-info.sorry p, .sorry-info, .bgtb-container {
+    .home-main-info.results p, .results-info, .bgtb-container {
+        width: 100%;
+    }
+    .home-main-info.results p, .results-info, .bgtb-container {
         width: 100%;
     }
     .bgtb-container {

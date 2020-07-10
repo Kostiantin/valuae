@@ -126,8 +126,7 @@ $(document).ready(function() {
 
 
         setTimeout(function() {
-            //$('.submit-loading').hide();
-            //$('.progress-bar').css({'width': (20 * 4)+'%'});
+            location.href = '/valuae_new/results.html';
         }, 5000);
 
     });
@@ -240,8 +239,9 @@ $(document).ready(function() {
 
     // when user don't know and clicks on 'Je n’ai aucun d?tail sur mon diamant'
     $('.move-to-user-form').click(function() {
-        $('#head-st-4').click();
+        //$('#head-st-4').click();
         $('#return-2').hide();
         $('#return-3').show();
     });
+
 });
