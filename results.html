@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="style.css">
-
+  <script src="scripts.js"></script>
 </head>
 <body class="b-results">
 <div class="bg-hand">
@@ -108,24 +108,110 @@
 
 
     <!-- Question Popups -->
-    <div class="questions questions-level-1">
-        <a href="javascript:void(0);" class="ql">
+    <div class="questions questions-level-1 q-trigger" data-openlevel="2">
 
-            <img src="question.png" alt="">
-            
-            <span class="one">
-                Une question sur votre résultat ?
-            </span>
-            <span class="two">
-                Nous sommes là pour vous aider !
-            </span>
-            
-        </a>
+        <ul class="ql-1">
+            <li>
+                <img src="question.png" alt="">
+            </li>
+            <li>
+                <span class="one">
+                    Une question sur votre résultat ?
+                </span>
+                <span class="two">
+                    Nous sommes là pour vous aider !
+                </span>
+            </li>
+        </ul>
+
     </div>
 
-    <div class="questions questions-level-2"></div>
+    <div class="questions questions-level-2">
+       <div class="ql-header no-border">
+           <ul class="qlh ">
+               <li><h4>Foire aux questions</h4></li>
+               <li><img class="shut-down" src="cross.png" alt=""></li>
+           </ul>
+       </div>
 
-    <div class="questions questions-level-3"></div>
+        <div class="ql-header q-trigger" data-openlevel="3-1">
+            <ul class="qlh">
+                <li>Pourquoi me proposez-vous <br> seulement une fourchette?</li>
+                <li><img src="arrow_right.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="ql-header q-trigger" data-openlevel="3-2">
+            <ul class="qlh">
+                <li>Pourquoi l’ai-je payé tellement <br>
+                    plus cher?</li>
+                <li><img src="arrow_right.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div class="ql-header q-trigger" data-openlevel="3-3">
+            <ul class="qlh">
+                <li>Pourquoi l’attestation stipule <br>
+                    un prix plus élevé?</li>
+                <li><img src="arrow_right.png" alt=""></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="questions questions-level-3 questions-level-3-1">
+        <div class="ql-header">
+            <ul class="qlh">
+                <li><img class="go-back" src="arrow_left.png" alt=""></li>
+                <li class="second">
+                    Pourquoi me proposez-vous <br>
+                    seulement une fourchette?</li>
+                <li><img class="shut-down" src="cross.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="ql-description">
+            Votre certificat provient d’un laboratoire reconnu, nous pouvons donc nous y fier pour vous faire notre proposition, mais chaque pierre étant unique, elle mérite une expertise physique afin d’en déterminer le prix final.
+            <br><br>
+
+            C’est pourquoi nous vous proposons seulement une fourchette dans un premier temps.
+        </div>
+    </div>
+
+    <div class="questions questions-level-3 questions-level-3-2">
+        <div class="ql-header">
+            <ul class="qlh">
+                <li><img class="go-back" src="arrow_left.png" alt=""></li>
+                <li class="second">
+                    Pourquoi l’ai-je payé tellement <br>
+                    plus cher?</li>
+                <li><img class="shut-down" src="cross.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="ql-description">
+            Votre certificat provient d’un laboratoire reconnu, nous pouvons donc nous y fier pour vous faire notre proposition, mais chaque pierre étant unique, elle mérite une expertise physique afin d’en déterminer le prix final.
+            <br><br>
+
+            C’est pourquoi nous vous proposons seulement une fourchette dans un premier temps.
+        </div>
+    </div>
+
+    <div class="questions questions-level-3 questions-level-3-3">
+        <div class="ql-header">
+            <ul class="qlh">
+                <li><img class="go-back" src="arrow_left.png" alt=""></li>
+                <li class="second">
+                    Pourquoi l’attestation stipule <br>
+                    un prix plus élevé?</li>
+                <li><img class="shut-down" src="cross.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="ql-description">
+            Votre certificat provient d’un laboratoire reconnu, nous pouvons donc nous y fier pour vous faire notre proposition, mais chaque pierre étant unique, elle mérite une expertise physique afin d’en déterminer le prix final.
+            <br><br>
+
+            C’est pourquoi nous vous proposons seulement une fourchette dans un premier temps.
+        </div>
+    </div>
     <!-- Question Popups End -->
     
     

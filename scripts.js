@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
-    var shapeOfDiamond = 'square';
-    console.log(shapeOfDiamond);
-    // first step for progress bar
-    var _etape_position_1 = $("#etape-"+1).offset();
+    if ($('.steps').length > 0) {
+        var shapeOfDiamond = 'square';
 
-    var _etape_position_1_left = parseInt(_etape_position_1.left);
+        // first step for progress bar
+        var _etape_position_1 = $("#etape-"+1).offset();
 
-    // change progress bar
-    $('.progress-bar').css({'width': _etape_position_1_left+'px'});
+        var _etape_position_1_left = parseInt(_etape_position_1.left);
+
+        // change progress bar
+        $('.progress-bar').css({'width': _etape_position_1_left+'px'});
+    }
 
     // step forward click
     $('.to-next-step').click(function() {
@@ -231,17 +233,42 @@ $(document).ready(function() {
     });
 
 
-    // activate accordion form
-    $( "form.current_slider_form" ).accordion({
-        collapsible: true
-    });
-
+    if ($('.steps').length > 0) {
+        // activate accordion form
+        $("form.current_slider_form").accordion({
+            collapsible: true
+        });
+    }
 
     // when user don't know and clicks on 'Je n’ai aucun d?tail sur mon diamant'
     $('.move-to-user-form').click(function() {
         //$('#head-st-4').click();
         $('#return-2').hide();
         $('#return-3').show();
+    });
+
+    // questions on final page
+    $(document).on('click', '.q-trigger', function() {
+
+       var _open_next_lvl = $(this).data('openlevel');
+
+       if (typeof _open_next_lvl != 'undefined' && _open_next_lvl != '') {
+           $('.questions').hide();
+           $('.questions-level-'+_open_next_lvl).show();
+       }
+
+    });
+
+    //close
+    $('.shut-down').click(function() {
+        $('.questions-level-2, .questions-level-3').hide();
+        $('.questions-level-1').show();
+    });
+
+    // back
+    $('.go-back').click(function() {
+        $('.questions-level-3').hide();
+        $('.questions-level-2').show();
     });
 
 });
