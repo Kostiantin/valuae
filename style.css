@@ -1094,6 +1094,16 @@ div[data-acc-content] {display:none; }
 }
 @media (max-width: 480px) {
 
+    .steps .logo-and-phone {
+        display: none;
+    }
+    .steps .top-steps-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
     #step-4 label {
         top: 10px;
         left: 0;
