@@ -749,6 +749,7 @@ ul.sbp-inputs li {
     font-size: 16px;
     font-family: 'Open Sans Regular';
     margin-top: 25px;
+    display: none;
 }
 .pe-result {
     padding-left: 30px;

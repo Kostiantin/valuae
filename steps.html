@@ -113,7 +113,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step round-diamond" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step round-diamond" data-ns="2" data-shape="rond">
                                 <img src="Rond.png" alt="">
                                 <span class="dsc">
                                     Rond
@@ -124,7 +124,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="princesse">
                                 <img src="Princess.png" alt="">
                                 <span class="dsc">
                                     Princesse
@@ -135,7 +135,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="coussin">
                                 <img src="Coussin.png" alt="">
                                 <span class="dsc">
                                     Coussin
@@ -146,7 +146,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="emeraude">
                                 <img src="Emeraude.png" alt="" class="emeraude">
                                 <span class="dsc">
                                     Emeraude
@@ -157,7 +157,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="poire">
                                 <img src="Poire.png" alt="" class="poire">
                                 <span class="dsc">
                                     Poire
@@ -168,7 +168,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="marquise">
                                 <img src="Marquise.png" alt="" class="marquise">
                             <span class="dsc">
                                 Marquise
@@ -179,7 +179,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="ovale">
                                 <img src="Ovale.png" alt="" class="ovale">
             <span class="dsc">
                 Ovale
@@ -190,7 +190,7 @@
 
                         <div class="col-xs-6 col-md-3 ">
 
-                            <div class="diamond-shapes-container to-next-step" data-ns="2">
+                            <div class="diamond-shapes-container to-next-step" data-ns="2" data-shape="coeur">
                                 <img src="Coeur.png" alt="" class="coeur">
             <span class="dsc cdsc">
                 Coeur
@@ -253,13 +253,16 @@
                         Merci de renseigner les dimensions de votre diamant :
                     </h3>
 
-                    <div class="carats with-validation-inputs">
+                    <div class="carats with-validation-inputs calculate-carats-block">
+
+                        <!--for round diamonds width is always 0-->
+                        <input type="hidden" value="0" name="width" id="width_round">
 
                         <ul class="sbp-inputs sbp-inputs-dimensions-round">
                             <li class="one">
 
                                 <div class="sbp-label">diamètre</div>
-                                <input type="number" class="spec-no-border-inp" value="" name="diameter" id="diameter_round">
+                                <input type="number" class="spec-no-border-inp" value="" name="length" id="diameter_round">
 
                             </li>
                             <li class="two">
@@ -301,13 +304,13 @@
                         Merci de renseigner les dimensions de votre diamant :
                     </h3>
 
-                    <div class="carats with-validation-inputs">
+                    <div class="carats with-validation-inputs calculate-carats-block">
 
                         <ul class="sbp-inputs sbp-inputs-dimensions-round">
                             <li class="one">
 
                                 <div class="sbp-label">diamètre</div>
-                                <input type="number" class="spec-no-border-inp" value="" name="diameter" id="diameter_square">
+                                <input type="number" class="spec-no-border-inp" value="" name="length" id="diameter_square">
 
                             </li>
 
@@ -319,7 +322,7 @@
                             <li class="three">
 
                                 <div class="sbp-label">largeur</div>
-                                <input type="number" class="spec-no-border-inp" value="" name="height" id="width_square">
+                                <input type="number" class="spec-no-border-inp" value="" name="width" id="width_square">
 
                             </li>
 

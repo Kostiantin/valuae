@@ -1,7 +1,68 @@
 $(document).ready(function() {
 
+    function toFixedLimit(num, limit) {
+        if(isNaN(num)) return 0;
+        if(limit === undefined) return num;
+        var value = String(num);
+        var res = String(num).split(".");
+        if(value.indexOf('.') !== -1 && res[1] && res[1].length > limit-1) {
+            value = parseFloat(num.toFixed(limit)).toString();
+        }
+        return value;
+    }
+
+    function calculateWeightInCarats(shapeOfDiamond, elem) {
+
+        console.log('inside calculations');
+        console.log(shapeOfDiamond);
+
+        var LG = parseFloat($(elem).parents('.calculate-carats-block:first').find('input[name="length"]').val());
+        var LR = parseFloat($(elem).parents('.calculate-carats-block:first').find('input[name="width"]').val());
+
+        if ($(elem).parents('.calculate-carats-block:first').find('input[name="width"]').attr('id') == 'width_round') {
+            LR = LG;
+        }
+
+        var HT = parseFloat($(elem).parents('.calculate-carats-block:first').find('input[name="height"]').val());
+
+        var carats = 0;
+
+        if(isNaN(LG) || isNaN(LR) || isNaN(HT)) {
+            alert('Veuillez renseigner les mesures en mm');
+            return;
+        }
+
+        var rapport = LR == 0 ? 0 : LG / LR;
+        switch(shapeOfDiamond) {
+            case 'rond': carats = LG * LR * HT * 0.0061;
+                break;
+            case 'poire': carats = LG * LR * HT * (rapport <= 1.375 ? 0.00615 : rapport >= 1.75 ? 0.00575 : 0.0060)
+                break;
+            case 'coussin': carats = LG * LR * HT * 0.00815;
+                break;
+            case 'emeraude': carats = LG * LR * HT * (rapport <= 1.75 ? 0.0092 : rapport >= 2.25 ? 0.0106 : 0.01)
+                break;
+            case 'princesse': carats = LG * LR * HT * 0.0082;
+                break;
+            case 'marquise': carats = LG * LR * HT * (rapport <= 1.75 ? 0.00565 : rapport >= 2.25 ? 0.00585 : 0.0058)
+                break;
+            case 'coeur': carats = LG * LR * HT * 0.0059;
+                break;
+            case 'ovale': carats = LG * LR * HT * (rapport <= 1.375 ? 0.00625 : rapport >= 1.75 ? 0.0067 : 0.0064)
+                break;
+            case 'asscher': carats = LG * LR * HT * 0.0080;
+                break;
+            default:
+        }
+
+        $(elem).parents('.calculate-carats-block:first').find('.pe-result').text(toFixedLimit(carats, 2));
+        $(elem).parents('.calculate-carats-block:first').find('.poids-estime').show();
+
+    }
+
     if ($('.steps').length > 0) {
-        var shapeOfDiamond = 'square';
+
+        var shapeOfDiamond = '';
 
         // first step for progress bar
         var _etape_position_1 = $("#etape-"+1).offset();
@@ -22,13 +83,11 @@ $(document).ready(function() {
         // if click was on shape we give value to variable to use later in step 3
         if ($(this).hasClass('diamond-shapes-container')) {
 
-            if ($(this).hasClass('round-diamond')) {
-                shapeOfDiamond = 'round';
-            }
-            else {
-                shapeOfDiamond = 'square';
-            }
 
+            shapeOfDiamond = $(this).data('shape');
+
+            /*console.log('shapeofdiamond');
+            console.log(shapeOfDiamond);*/
         }
 
         var _ns = parseInt($(this).data('ns'));
@@ -48,6 +107,13 @@ $(document).ready(function() {
 
         var _first_step_height = $('#step-1').css('height');
 
+        if (_ns == '2') {
+
+            $('.calculate-carats-block input[name="length"], .calculate-carats-block input[name="width"], .calculate-carats-block input[name="height"]').val('');
+            $('.calculate-carats-block .poids-estime .pe-result').text('');
+            $('.calculate-carats-block .poids-estime').hide();
+
+        }
         if (_ns == '3') {
             setTimeout(function() {
                 $('#step-3').css('height','auto');
@@ -146,11 +212,11 @@ $(document).ready(function() {
 
         if (sub_point_to_show == '2-2') {
             console.log(shapeOfDiamond);
-            if (shapeOfDiamond == 'square') {
-                $('#sub-point-2-3').show();
+            if (shapeOfDiamond == 'rond') {
+                $('#sub-point-'+sub_point_to_show).show();
             }
             else {
-                $('#sub-point-'+sub_point_to_show).show();
+                $('#sub-point-2-3').show();
             }
 
         }
@@ -161,18 +227,27 @@ $(document).ready(function() {
     });
 
     // validate all values entered
-    function sBoxValidation(elem) {
+    function sBoxValidation(shapeOfDiamond, elem) {
+
+        $('.poids-estime').hide();
+        console.log('checking');
 
         var _errors_in_block = false;
 
         $(elem).parents('.with-validation-inputs:first').find('input, select').each(function() {
-            if ($(this).val() == '') {
+            if ($(this).val() == '' && $(this).attr('id') != 'width_round') {
                 _errors_in_block = true;
             }
         });
 
         if (_errors_in_block == false) {
+
             $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').removeAttr('disabled');
+
+            if ($(elem).parents('.with-validation-inputs:first').hasClass('calculate-carats-block')) {
+                calculateWeightInCarats(shapeOfDiamond, elem);
+            }
+
         }
         else {
             $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').attr('disabled', true);
@@ -182,7 +257,7 @@ $(document).ready(function() {
     // validation on step 2
     $('.with-validation-inputs input').keyup(function() {
 
-        sBoxValidation(this);
+        sBoxValidation(shapeOfDiamond, this);
 
     });
 
@@ -190,12 +265,12 @@ $(document).ready(function() {
     // validation on step 3
     $('.s-boxes input').keyup(function(){
 
-        sBoxValidation(this);
+        sBoxValidation(shapeOfDiamond, this);
 
     });
     $('.s-boxes select').change(function(){
 
-        sBoxValidation(this);
+        sBoxValidation(shapeOfDiamond, this);
 
     });
 
