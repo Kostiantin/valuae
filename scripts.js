@@ -211,17 +211,24 @@ $(document).ready(function() {
         var sub_point_to_show = $(this).data('subpointtoshow');
 
         if (sub_point_to_show == '2-2') {
-            console.log(shapeOfDiamond);
+
+
             if (shapeOfDiamond == 'rond') {
-                $('#sub-point-'+sub_point_to_show).show();
+
+                //$('#sub-point-' + sub_point_to_show).show();
+                $('#sub-point-' + sub_point_to_show).show('slide', {direction: 'up'}, 500);
             }
             else {
-                $('#sub-point-2-3').show();
+
+                $('#sub-point-2-3').show('slide', {direction: 'up'}, 500);
+
             }
 
         }
         else {
-            $('#sub-point-'+sub_point_to_show).show();
+
+            $('#sub-point-' + sub_point_to_show).show('slide', {direction: 'up'}, 500);
+
         }
 
     });
@@ -299,7 +306,7 @@ $(document).ready(function() {
 
         $('.lab-form').hide();
 
-        $('.lab-form-' + _id_of_lab).show();
+        $('.lab-form-' + _id_of_lab).show('slide', {direction: 'up'}, 500);
 
     });
 
@@ -311,7 +318,8 @@ $(document).ready(function() {
     if ($('.steps').length > 0) {
         // activate accordion form
         $("form.current_slider_form").accordion({
-            collapsible: true
+            collapsible: true,
+            animate: 1000
         });
     }
 
@@ -346,4 +354,32 @@ $(document).ready(function() {
         $('.questions-level-2').show();
     });
 
+    // questions sticky
+    if ($('.questions').length > 0) {
+
+        $(window).scroll(function(e) {
+
+            var $el = $('.questions-level-1');
+            var isPositionFixed = ($el.css('position') == 'fixed');
+
+            if ($(this).scrollTop() > 700 && !isPositionFixed){
+                $el.css({'position': 'fixed', 'top': '0px'});
+            }
+            if ($(this).scrollTop() < 700 && isPositionFixed){
+                $el.css({'position': 'absolute', 'top': '700px'});
+            }
+
+            var $el2 = $('.questions-level-2, .questions-level-3');
+            var isPositionFixed2 = ($el2.css('position') == 'fixed');
+
+            if ($(this).scrollTop() > 500 && !isPositionFixed2){
+                $el2.css({'position': 'fixed', 'top': '0px'});
+            }
+            if ($(this).scrollTop() < 500 && isPositionFixed2){
+                $el2.css({'position': 'absolute', 'top': '500px'});
+            }
+
+        });
+
+    }
 });

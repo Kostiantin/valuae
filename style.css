@@ -423,6 +423,11 @@ input:focus, textarea:focus, select:focus, button:focus {
     margin-top: 40px;
 }
 
+.mt-45 {
+    margin-top: 45px!important;
+}
+
+
 .return-buttons {
     position: relative;
     margin-bottom: 20px;
@@ -979,14 +984,12 @@ div[data-acc-content] {display:none; }
     display: none;
     top: 500px;
     padding: 0;
-    transition: all 0.5s ease;
 }
 .questions-level-3 {
     z-index: 103;
     display: none;
     top: 500px;
     padding: 0;
-    transition: all 0.5s ease;
 }
 .ql-1,.qlh {
     font-size: 16px;
@@ -1033,7 +1036,6 @@ div[data-acc-content] {display:none; }
 .qlh li:last-child {
     width: 30px;
     text-align: right;
-
 }
 .ql-header {
     height: 95px;
@@ -1045,6 +1047,9 @@ div[data-acc-content] {display:none; }
     font-size: 16px;
     line-height: 22px;
     transition: all 0.3s ease;
+}
+.has-transition {
+    transition: all 0.5s ease;
 }
 .ql-header:hover {
     border-left: 10px solid #0D0F23;
