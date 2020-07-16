@@ -83,11 +83,8 @@ $(document).ready(function() {
         // if click was on shape we give value to variable to use later in step 3
         if ($(this).hasClass('diamond-shapes-container')) {
 
-
             shapeOfDiamond = $(this).data('shape');
 
-            /*console.log('shapeofdiamond');
-            console.log(shapeOfDiamond);*/
         }
 
         var _ns = parseInt($(this).data('ns'));
@@ -144,7 +141,7 @@ $(document).ready(function() {
         var _prev_prev_step_num = _prev_step_num - 1;
 
         if (parseInt($(window).innerWidth()) <= 480 && _prev_step_num == 1) {
-            $('.return-buttons').hide();
+            //$('.return-buttons').hide();
         }
 
         /*$('#step-'+_current_step_num).slideUp('1500');
@@ -319,7 +316,7 @@ $(document).ready(function() {
         // activate accordion form
         $("form.current_slider_form").accordion({
             collapsible: true,
-            animate: 1000
+            animate: 700
         });
     }
 
@@ -362,24 +359,33 @@ $(document).ready(function() {
             var $el = $('.questions-level-1');
             var isPositionFixed = ($el.css('position') == 'fixed');
 
-            if ($(this).scrollTop() > 700 && !isPositionFixed){
+            var _q1_tp = 700;
+            var _q2_tp = 500;
+
+            if (parseInt($(window).innerWidth()) <= 480) {
+                 _q1_tp = 720;
+                 _q2_tp = 720;
+            }
+
+            if ($(this).scrollTop() > _q1_tp && !isPositionFixed){
                 $el.css({'position': 'fixed', 'top': '0px'});
             }
-            if ($(this).scrollTop() < 700 && isPositionFixed){
-                $el.css({'position': 'absolute', 'top': '700px'});
+            if ($(this).scrollTop() < _q1_tp && isPositionFixed){
+                $el.css({'position': 'absolute', 'top': _q1_tp + 'px'});
             }
 
             var $el2 = $('.questions-level-2, .questions-level-3');
             var isPositionFixed2 = ($el2.css('position') == 'fixed');
 
-            if ($(this).scrollTop() > 500 && !isPositionFixed2){
+            if ($(this).scrollTop() > _q2_tp && !isPositionFixed2){
                 $el2.css({'position': 'fixed', 'top': '0px'});
             }
-            if ($(this).scrollTop() < 500 && isPositionFixed2){
-                $el2.css({'position': 'absolute', 'top': '500px'});
+            if ($(this).scrollTop() < _q2_tp && isPositionFixed2){
+                $el2.css({'position': 'absolute', 'top': _q2_tp+'px'});
             }
 
         });
 
     }
+
 });
