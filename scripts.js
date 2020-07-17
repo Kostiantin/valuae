@@ -13,8 +13,8 @@ $(document).ready(function() {
 
     function calculateWeightInCarats(shapeOfDiamond, elem) {
 
-        console.log('inside calculations');
-        console.log(shapeOfDiamond);
+        /*console.log('inside calculations');
+        console.log(shapeOfDiamond);*/
 
         var LG = parseFloat($(elem).parents('.calculate-carats-block:first').find('input[name="length"]').val());
         var LR = parseFloat($(elem).parents('.calculate-carats-block:first').find('input[name="width"]').val());
@@ -56,6 +56,7 @@ $(document).ready(function() {
         }
 
         $(elem).parents('.calculate-carats-block:first').find('.pe-result').text(toFixedLimit(carats, 2));
+        $(elem).parents('.calculate-carats-block:first').find('input[name="amount-of-carats"]').val(toFixedLimit(carats, 2));
         $(elem).parents('.calculate-carats-block:first').find('.poids-estime').show();
 
     }
@@ -234,18 +235,18 @@ $(document).ready(function() {
     function sBoxValidation(shapeOfDiamond, elem) {
 
         $('.poids-estime').hide();
-        console.log('checking');
+        //console.log('checking');
 
         var _errors_in_block = false;
 
-        $(elem).parents('.with-validation-inputs:first').find('input, select').each(function() {
+        $(elem).parents('.with-validation-inputs:first').find('input, select').not('.not-for-validation').each(function() {
             if ($(this).val() == '' && $(this).attr('id') != 'width_round') {
                 _errors_in_block = true;
             }
         });
 
         if (_errors_in_block == false) {
-
+//console.log('no-errors');
             $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').removeAttr('disabled');
 
             if ($(elem).parents('.with-validation-inputs:first').hasClass('calculate-carats-block')) {
@@ -254,6 +255,7 @@ $(document).ready(function() {
 
         }
         else {
+            //console.log('yes-errors');
             $(elem).parents('.with-validation-inputs:first').find('button.to-next-step').attr('disabled', true);
         }
     }
